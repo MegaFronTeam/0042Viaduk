@@ -9,6 +9,12 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sCatalog/_sCatalog.pug
 
+include ../blocks/sProductSlider/_sProductSlider.pug
+include ../blocks/sSearchTrip/_sSearchTrip.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sAdvs/_sAdvs.pug
+include ../blocks/sMap/_sMap.pug
+
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= null
@@ -23,7 +29,11 @@ block pagecontent
 	+parts('header')
 	main
 		+headerBlock 
-		+sCatalog
+		+sProductSlider
+		+sSearchTrip
+		+sAbout
+		+sAdvs
+		+sMap
 		+sForm()
 		+sContact()
 		

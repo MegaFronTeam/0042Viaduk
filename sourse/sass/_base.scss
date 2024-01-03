@@ -132,8 +132,12 @@ main{
 	font-family: $font-family-code;
 }
 
+small,
 .small {
 	font-size: $small;
+}
+.smallest{
+	font-size: $smallest;
 }
 
 .tdn {
@@ -494,4 +498,29 @@ iframe {
 		height: 100%;
 		object-fit: cover;
 	}
+}
+
+
+.btn{
+	text-transform: uppercase;
+}
+
+.btn-warning {
+	--bs-btn-color: #fff;
+	--bs-btn-hover-color: #fff;
+	--bs-btn-active-color: #fff;
+	--bs-btn-disabled-color: #fff;
+	--bs-btn-bg: #fba841;
+	--bs-btn-border-color: #fba841;
+	--bs-btn-hover-bg: var(--accent-dark);
+
+	--bs-btn-hover-border-color: var(--accent-dark); 
+	--bs-btn-active-bg: var(--accent-dark);
+	--bs-btn-active-border-color: var(--accent-dark); 
+	--bs-btn-disabled-bg: #fba841;
+	--bs-btn-disabled-border-color: #fba841;
+}
+
+input[type='checkbox'] {
+	background-size: 140%;
 }

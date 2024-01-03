@@ -3,6 +3,8 @@
 	--animate-delay: 1.2s;
 	--bs-body-font-size: #{$em-base};
 
+	--accent-dark: #EB8404;
+	
 	@include media-breakpoint-up(md) {
 
 		--sPT: #{rem(80)};
