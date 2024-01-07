@@ -1,0 +1,10 @@
+{
+  "trailingComma": "es5",
+  "semi": true,
+  "experimentalTernaries": true,
+  "singleQuote": false,
+  "useTabs": true,
+  "arrowParens": "avoid",
+  "bracketSpacing": false,
+  "bracketSameLine": false
+}
