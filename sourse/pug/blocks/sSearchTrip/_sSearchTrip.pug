@@ -1,9 +1,40 @@
+mixin cityItem(city)
+	+e.city.swiper-slide(href='#')!= city
+
+
 mixin sSearchTrip(data)
 	// start sSearchTrip
 	+b.SECTION.sSearchTrip.section#sSearchTrip&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sSearchTrip
-				
-			+e.row.row
+				h2 Поиск путешествия
+			+e.input-wrap.form-group.radio-buttons
+				.row
+					.col-auto
+						+in-c('radio','Регулярные туры по России')(checked)
+					.col-auto
+						+in-c('radio','Регулярные туры по СНГ')
+					.col-auto
+						+in-c('radio','Другие туры')
+			+e.swiper--js
+				+e.row.swiper-wrapper
+					+cityItem('Астрахань')
+					+cityItem('Байкал')
+					+cityItem('Великий Устюг')
+					+cityItem('Вологда')
+					+cityItem('Золотое кольцо')
+					+cityItem('Кавказ')
+					+cityItem('Казань')
+					+cityItem('Калининградская область')
+					+cityItem('Камчатка')
+					+cityItem('Карелия')
+					+cityItem('Крым')
+					+cityItem('Кавказ')
+					+cityItem('Казань')
+					+cityItem('Калининградская область')
+					+cityItem('Камчатка')
+					+cityItem('Карелия')
+					+cityItem('Крым')
+				+e.arrow-wrap
+					+arrow()
 	// end sSearchTrip

@@ -1,9 +1,30 @@
+mixin productItem(img, title)
+	+e.col.swiper-slide
+		+b.product-item
+			+e.img-wrap
+				+img(`img/product-${img}.png`)
+			+e.container
+				+e.title= title
+
 mixin sProductSlider(data)
 	// start sProductSlider
 	+b.SECTION.sProductSlider.section#sProductSlider&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sProductSlider
-				
-			+e.row.row
+				h2 Лидеры продаж
+			+e.swiper--js
+				+e.row.swiper-wrapper
+					+productItem('01', 'Москва')
+					+productItem('02', 'Золотое кольцо')
+					+productItem('03', 'Автобусные туры')
+					+productItem('04', 'Казань')
+					+productItem('05', 'Школьные туры')
+					+productItem('06', 'Подарочные сертификаты')
+					+e.col.swiper-slide
+						+b.product-item
+							+e.img-wrap
+								+img(`img/product-07.png`)
+							+e.container
+								+e.title Туры по России
+								+e.caption на новый год 2024
 	// end sProductSlider

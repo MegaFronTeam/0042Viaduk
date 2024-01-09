@@ -59,6 +59,67 @@ function eventHandler() {
 		freeModeMomentum: true,
 	});
 
+
+  new Swiper('.headerBlock__slider--js .swiper', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+    pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	})
+
+  new Swiper('.sProductSlider__swiper--js', {
+		freeMode: true,
+    loop: true,
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		breakpoints: {
+			960: {
+				spaceBetween: 30,
+				// slidesPerView: 4,
+			},
+		},
+	})
+
+  const swiper = new Swiper(".sSearchTrip__swiper--js", {
+    slidesPerView: 2,
+    grid: {
+      rows: 3,
+    },
+    spaceBetween: 10,
+    navigation: {
+			nextEl: '.sSearchTrip__swiper .swiper-button-next',
+			prevEl: '.sSearchTrip__swiper .swiper-button-prev',
+		},
+    breakpoints: {
+      576: {
+        slidesPerView: 3,
+        grid: {
+          rows: 3,
+        },
+      },
+      768: {
+        spaceBetween: 30,
+        slidesPerView: 4,
+        grid: {
+          rows: 3,
+        },
+      },
+
+    }
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+  });
+
 	$(".custom-select-wrap").each(function () {
 		const self = $(this);
 		self.find(".custom-select-js").select2({

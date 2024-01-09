@@ -524,3 +524,20 @@ iframe {
 input[type='checkbox'] {
 	background-size: 140%;
 }
+
+.btn-secondary {
+  --bs-btn-color: #000;
+  --bs-btn-hover-color: #000;
+  --bs-btn-active-color: #000;
+  --bs-btn-disabled-color: #000;
+
+  --bs-btn-bg: #{$gray-200};
+	--bs-btn-border-color: #{$gray-200};
+	--bs-btn-hover-bg: #{$gray-300};
+
+	--bs-btn-hover-border-color: #{$gray-300};
+	--bs-btn-active-bg: #{$gray-300};
+	--bs-btn-active-border-color: #{$gray-300};
+	--bs-btn-disabled-bg: #{$gray-200};
+	--bs-btn-disabled-border-color: #{$gray-200};
+}

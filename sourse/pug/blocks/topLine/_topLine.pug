@@ -2,8 +2,26 @@ mixin topLine()
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
-			.row
+			+e.row.row
+				.col-4
+					+e.logo(href="#")
+						+img('img/logo.png')
+				.col
+					+e.contacts
+						+b.contacts-item
+							+e.icon
+								+icon('phone')
+							+e.content
+								p Телефоны:
+								+e.tel(href="tel:+74955450621") +7 (495) 545-06-21
+								+e.tel(href="tel:+74959616127") +7 (495) 961-61-27
+						+b.contacts-item
+							+e.icon
+								+icon('clock')
+							+e.content
+								p График работы:
+								+e.schedule пн-пт 10:00-19:00, сб 11:00,
+								+e.schedule вс - выходной
+				.col-2
+					+e.btn.btn.btn-secondary.callback(href='#') Заказать звонок
 	// end topLine

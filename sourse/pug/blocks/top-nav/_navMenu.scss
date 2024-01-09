@@ -19,7 +19,10 @@
 	}
 	a{
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		padding: rem(22) calc(var(--bs-gutter-x) - rem(5));
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 500;
 	}
 }
 

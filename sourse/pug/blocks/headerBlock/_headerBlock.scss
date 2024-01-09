@@ -1,14 +1,15 @@
 // start .headerBlock
 .headerBlock {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
+  background-color:$gray-200;
 	// --sTPB: #{rem()}; 
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
+	// min-height: 100vh;
+	// min-height: calc(var(--vh, 1vh) * 100);
 	
 	
 	&__row{
-		// --bs-gutter-x: #{rem()};
+		--bs-gutter-x: #{rem(0)};
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
@@ -24,6 +25,117 @@
 	&__slide{
 		height: auto;
 	}
+  .header-item {
+    color: $gray-700;
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    padding: rem(25) rem(15);
+    .icon {
+      font-size: rem(32);
+    }
+    &__title {
+      text-transform: uppercase;
+      font-weight: 500;
+      line-height: 100%;
+    }
+  }
+  &__title-wrap {
+    max-width: rem(470);
+    margin-bottom: rem(70);
+    .h1 {
+      margin-bottom: rem(15);
+    }
+    p {
+      margin-bottom: rem(30);
+    }
+  }
+  &__slide {
+		padding-top: rem(90);
+    padding-bottom: rem(111);
+		// @include media-breakpoint-up(lg) {
+		// 	padding: rem(110) rem(60) rem(162);
+		// }
+    }
+  // .swiper-button-prev,
+  // .swiper-button-next {
+  //   right: rem(100);
+  //   border: none !important;
+	//   background-color: none !important;
+  // }
+  .form-wrap {
+    background: $white;
+    border-radius: rem(100);
+    max-width: rem(950);
+    &__wrap {
+      display: flex;
+    }
+    input {
+      padding: 0;
+    }
+    &__input-title {
+      font-size: $small;
+      font-weight: 700;
+    }
+    &__input-wrap {
+      &:not(:last-child) {
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 100%;
+          width: rem(1);
+          color: $gray-200;
+          z-index: 2;
+        }
+      }
+      label {
+        display: flex;
+      }
+    }
+  }
+  &__arr-wrapper {
+    width: rem(223);
+    display: flex;
+    position: absolute;
+    bottom: rem(42);
+    transform: translateX(-50%);
+    left: 50%;
+    // position: relative;
+    // margin: 0 auto;
+    // transform: translateY(-100%);
+    z-index: 50;
+  }
+  .swiper {
+    position: relative;
+  }
+  .swiper-button-hand {
+    // position: relative;
+    
+    --swiperBgDefHover: transparent;
+    .icon {
+      fill: $white;
+      stroke: $white;
+    }
+  }
+  .swiper-pagination {
+    bottom: rem(30);
+    span {
+      width: rem(13);
+      height: rem(13);
+    }
+  }
+  .swiper-button-hand-next {
+    right: 0;
+  }
+  .swiper-button-hand-prev {
+    left: 0;
+  }
+  .swiper-pagination-bullet-active {
+    border: rem(2) solid $white;
+
+  }
 
 	@include media-breakpoint-up(xl) {}
 
