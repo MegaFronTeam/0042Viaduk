@@ -24,11 +24,11 @@
     background: $white;
     padding: rem(20) rem(30);
     border-radius: rem(30);
+    display: block;
   }
   &__swiper {
     overflow: hidden;
     position: relative;
-    
     padding-bottom: rem(40);
   }
   .swiper-wrapper {
@@ -41,7 +41,7 @@
     }
   }
   .swiper-slide {
-    // width: calc((100% - 30px*3) / 4);
+    // margin-top: 0 !important;
   }
   .swiper-grid-column>.swiper-wrapper {
     flex-direction: row;
@@ -54,6 +54,7 @@
     padding-right: rem(20);
     height: calc(33.3333% - 20px);
     background-color: $body-bg;
+    border-radius: rem(30);
     @include media-breakpoint-down(md) {
       margin: 0 auto;
     }
@@ -93,6 +94,9 @@
   border: none;
   background-color: transparent;
   box-shadow: none;
+  &:hover {
+    background: none;
+  }
   .icon {
     // fill: none;
     stroke: $gray-700;

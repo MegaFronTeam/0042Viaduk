@@ -18,12 +18,17 @@ mixin headerBlock()
 									.h2 Экскурсионные туры по России и СНГ
 									p Туры на 2-10 дней от 6 790 руб./чел.
 									+e.btn.btn.btn-warning(href='#') подобрать тур
-								+e.form-wrap
-									+form-wrap
-										+e.wrap
+								+form-wrap
+									+e.row.row
+										.col-auto
 											+input("Выберите направление", 'text', 'Куда поедем?')
-											//- +input("Дата заезда",'text')(required readonly autocomplete="off"  class="date-input" value="22.03.2024").data-picker--js
+										.col-auto
+											+input("Любая",'date', 'Дата заезда')(required readonly autocomplete="off"  class="date-input" value="22.03.2024")
+										.col-3
 											+input('Любое', 'number', 'Кол-во дней')
+										.col-auto
+											+e.btn.btn.btn-warning.small найти туры
+												+icon('search')
 						+e.slide.swiper-slide.bg-wrap
 							+img('img/header-bg-1.png', 'bg').picture-bg
 							.container
@@ -53,10 +58,11 @@ mixin headerBlock()
 					.swiper-pagination
 					+e.arr-wrapper
 						+arrow()
-			+e.row.row
-				+headerItem('holiday', 'туры на праздники')
-				+headerItem('weekend', 'туры выходного дня')
-				+headerItem('bus', 'автобусные туры')
-				+headerItem('star', 'новинки')
-				+headerItem('book', 'школьные туры')
+			.container
+				+e.row.row
+					+headerItem('holiday', 'туры на праздники')
+					+headerItem('weekend', 'туры выходного дня')
+					+headerItem('bus', 'автобусные туры')
+					+headerItem('star', 'новинки')
+					+headerItem('book', 'школьные туры')
 	// end headerBlock

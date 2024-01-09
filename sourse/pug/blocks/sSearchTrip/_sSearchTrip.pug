@@ -1,5 +1,6 @@
 mixin cityItem(city)
-	+e.city.swiper-slide(href='#')!= city
+	.swiper-slide
+		+e.city(href='#')!= city
 
 
 mixin sSearchTrip(data)

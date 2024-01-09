@@ -45,23 +45,39 @@
 											<a class="headerBlock__btn btn btn-warning" href="#">подобрать тур
 											</a>
 										</div>
-										<div class="headerBlock__form-wrap">
-											<div class="form-wrap">
-												<form>
-													<div class="form-wrap__wrap">
+										<div class="form-wrap">
+											<form>
+												<div class="form-wrap__row row">
+													<div class="col-auto">
 														<div class="form-wrap__input-wrap form-group">
 															<label><span class="form-wrap__input-title">Куда поедем?</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Выберите направление"/>
 															</label>
 														</div>
 														<!-- +e.input-wrap-->
+													</div>
+													<div class="col-auto">
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__input-title">Дата заезда</span><input class="form-wrap__input form-control date-input" inputmode="date" name="date" type="date" required="required" readonly="readonly" autocomplete="off" value="22.03.2024"/>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+													<div class="col-3">
 														<div class="form-wrap__input-wrap form-group">
 															<label><span class="form-wrap__input-title">Кол-во дней</span><input class="form-wrap__input form-control" inputmode="number" name="number" type="number" placeholder="Любое" step="any"/>
 															</label>
 														</div>
 														<!-- +e.input-wrap-->
 													</div>
-												</form>
-											</div>
+													<div class="col-auto">
+														<div class="form-wrap__btn btn btn-warning small">найти туры
+															<svg class="icon icon-search ">
+																<use xlink:href="img/svg/sprite.svg#search"></use>
+															</svg>
+														</div>
+													</div>
+												</div>
+											</form>
 										</div>
 									</div>
 								</div>
@@ -137,51 +153,53 @@
 							</div>
 						</div>
 					</div>
-					<div class="headerBlock__row row">
-						<div class="col-auto">
-							<a class="header-item" href="#">
-								<svg class="icon icon-holiday ">
-									<use xlink:href="img/svg/sprite.svg#holiday"></use>
-								</svg>
-								<div class="header-item__title">туры на праздники
-								</div>
-							</a>
-						</div>
-						<div class="col-auto">
-							<a class="header-item" href="#">
-								<svg class="icon icon-weekend ">
-									<use xlink:href="img/svg/sprite.svg#weekend"></use>
-								</svg>
-								<div class="header-item__title">туры выходного дня
-								</div>
-							</a>
-						</div>
-						<div class="col-auto">
-							<a class="header-item" href="#">
-								<svg class="icon icon-bus ">
-									<use xlink:href="img/svg/sprite.svg#bus"></use>
-								</svg>
-								<div class="header-item__title">автобусные туры
-								</div>
-							</a>
-						</div>
-						<div class="col-auto">
-							<a class="header-item" href="#">
-								<svg class="icon icon-star ">
-									<use xlink:href="img/svg/sprite.svg#star"></use>
-								</svg>
-								<div class="header-item__title">новинки
-								</div>
-							</a>
-						</div>
-						<div class="col-auto">
-							<a class="header-item" href="#">
-								<svg class="icon icon-book ">
-									<use xlink:href="img/svg/sprite.svg#book"></use>
-								</svg>
-								<div class="header-item__title">школьные туры
-								</div>
-							</a>
+					<div class="container">
+						<div class="headerBlock__row row">
+							<div class="col-auto">
+								<a class="header-item" href="#">
+									<svg class="icon icon-holiday ">
+										<use xlink:href="img/svg/sprite.svg#holiday"></use>
+									</svg>
+									<div class="header-item__title">туры на праздники
+									</div>
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="header-item" href="#">
+									<svg class="icon icon-weekend ">
+										<use xlink:href="img/svg/sprite.svg#weekend"></use>
+									</svg>
+									<div class="header-item__title">туры выходного дня
+									</div>
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="header-item" href="#">
+									<svg class="icon icon-bus ">
+										<use xlink:href="img/svg/sprite.svg#bus"></use>
+									</svg>
+									<div class="header-item__title">автобусные туры
+									</div>
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="header-item" href="#">
+									<svg class="icon icon-star ">
+										<use xlink:href="img/svg/sprite.svg#star"></use>
+									</svg>
+									<div class="header-item__title">новинки
+									</div>
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="header-item" href="#">
+									<svg class="icon icon-book ">
+										<use xlink:href="img/svg/sprite.svg#book"></use>
+									</svg>
+									<div class="header-item__title">школьные туры
+									</div>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -295,40 +313,74 @@
 						</div>
 						<div class="sSearchTrip__swiper sSearchTrip__swiper--js">
 							<div class="sSearchTrip__row swiper-wrapper">
-								<a class="sSearchTrip__city swiper-slide" href="#">Астрахань
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Байкал
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Великий Устюг
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Вологда
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Золотое кольцо
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Кавказ
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Казань
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Калининградская область
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Камчатка
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Карелия
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Крым
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Кавказ
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Казань
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Калининградская область
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Камчатка
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Карелия
-								</a>
-								<a class="sSearchTrip__city swiper-slide" href="#">Крым
-								</a>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Астрахань
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Байкал
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Великий Устюг
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Вологда
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Золотое кольцо
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Кавказ
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Казань
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Калининградская область
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Камчатка
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Карелия
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Крым
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Кавказ
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Казань
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Калининградская область
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Камчатка
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Карелия
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="sSearchTrip__city" href="#">Крым
+									</a>
+								</div>
 							</div>
 							<div class="sSearchTrip__arrow-wrap">
 								<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
