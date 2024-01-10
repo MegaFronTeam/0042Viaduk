@@ -93,20 +93,20 @@ function eventHandler() {
     grid: {
       rows: 3,
     },
-    spaceBetween: 10,
+    spaceBetween: 20,
     navigation: {
 			nextEl: '.sSearchTrip__swiper .swiper-button-next',
 			prevEl: '.sSearchTrip__swiper .swiper-button-prev',
 		},
     breakpoints: {
-      576: {
+      768: {
+        spaceBetween: 30,
         slidesPerView: 3,
         grid: {
           rows: 3,
         },
       },
-      768: {
-        spaceBetween: 30,
+      1200: {
         slidesPerView: 4,
         grid: {
           rows: 3,
@@ -119,6 +119,11 @@ function eventHandler() {
     //   clickable: true,
     // },
   });
+  //     --bs-breakpoint-xs: 0;
+    // --bs-breakpoint-sm: 576px;
+    // --bs-breakpoint-md: 768px;
+    // --bs-breakpoint-lg: 992px;
+    // --bs-breakpoint-xl: 1200px;
 
 	$(".custom-select-wrap").each(function () {
 		const self = $(this);

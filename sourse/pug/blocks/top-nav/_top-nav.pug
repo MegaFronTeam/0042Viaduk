@@ -27,7 +27,25 @@ mixin top-nav()
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
-					
+							.contacts
+								+b.contacts-item.phone
+									+e.icon
+										+icon('phone')
+									+e.content
+										p Телефоны:
+										ul
+											li
+												+e.tel(href="tel:+74955450621") +7 (495) 545-06-21
+											li
+												+e.tel(href="tel:+74959616127") +7 (495) 961-61-27
+								+b.contacts-item
+									+e.icon
+										+icon('clock')
+									+e.content
+										p График работы:
+										+e.schedule пн-пт 10:00-19:00, сб 11:00,
+										+e.schedule вс - выходной
+								+e.btn.btn.btn-secondary.callback.small(href='#') Заказать звонок
 				.col-auto.d-lg-none
 					+menu-toggle()
 	// end top-nav

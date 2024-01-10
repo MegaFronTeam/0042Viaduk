@@ -3,10 +3,21 @@
 	--sPT: #{rem(0)};
 	--sPB: #{rem(0)};
   background-color:$gray-200;
+  
 	// --sTPB: #{rem()}; 
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
-	
+  &__slider {
+    position: relative;
+  }
+	.form-container {
+    position: absolute;
+    bottom: 15%;
+    left: 1vw;
+    // height: 100%;
+    z-index: 15;
+    // margin: 0 auto;
+  }
 	
 	&__row{
 		--bs-gutter-x: #{rem(0)};

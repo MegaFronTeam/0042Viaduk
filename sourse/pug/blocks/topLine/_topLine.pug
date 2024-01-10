@@ -3,7 +3,7 @@ mixin topLine()
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
 			+e.row.row
-				.col-4
+				.col-6.col-md-4
 					+e.logo(href="#")
 						+img('img/logo.png')
 				.col
@@ -22,6 +22,6 @@ mixin topLine()
 								p График работы:
 								+e.schedule пн-пт 10:00-19:00, сб 11:00,
 								+e.schedule вс - выходной
-				.col-2
-					+e.btn.btn.btn-secondary.callback(href='#') Заказать звонок
+				.col-auto.col-lg-2
+					+e.btn.btn.btn-secondary.callback.small(href='#') Заказать звонок
 	// end topLine

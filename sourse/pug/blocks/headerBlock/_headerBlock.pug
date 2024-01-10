@@ -18,46 +18,25 @@ mixin headerBlock()
 									.h2 Экскурсионные туры по России и СНГ
 									p Туры на 2-10 дней от 6 790 руб./чел.
 									+e.btn.btn.btn-warning(href='#') подобрать тур
-								+form-wrap
-									+e.row.row
-										.col-auto
-											+input("Выберите направление", 'text', 'Куда поедем?')
-										.col-auto
-											+input("Любая",'date', 'Дата заезда')(required readonly autocomplete="off"  class="date-input" value="22.03.2024")
-										.col-3
-											+input('Любое', 'number', 'Кол-во дней')
-										.col-auto
-											+e.btn.btn.btn-warning.small найти туры
-												+icon('search')
 						+e.slide.swiper-slide.bg-wrap
 							+img('img/header-bg-1.png', 'bg').picture-bg
-							.container
-								+e.title-wrap
-									.h2 Экскурсионные туры по России и СНГ
-									p Туры на 2-10 дней от 6 790 руб./чел.
-									+e.btn.btn.btn-warning(href='#') подобрать тур
-								+e.form-wrap
-									+form-wrap
-										+e.wrap
-											+input("Выберите направление", 'text', 'Куда поедем?')
-											//- +input("Дата заезда",'text')(required readonly autocomplete="off"  class="date-input" value="22.03.2024").data-picker--js
-											+input('Любое', 'number', 'Кол-во дней')
 						+e.slide.swiper-slide.bg-wrap
 							+img('img/header-bg-1.png', 'bg').picture-bg
-							.container
-								+e.title-wrap
-									.h2 Экскурсионные туры по России и СНГ
-									p Туры на 2-10 дней от 6 790 руб./чел.
-									+e.btn.btn.btn-warning(href='#') подобрать тур
-								+e.form-wrap
-									+form-wrap
-										+e.wrap
-											+input("Выберите направление", 'text', 'Куда поедем?')
-											//- +input("Дата заезда",'text')(required readonly autocomplete="off"  class="date-input" value="22.03.2024").data-picker--js
-											+input('Любое', 'number', 'Кол-во дней')
 					.swiper-pagination
 					+e.arr-wrapper
 						+arrow()
+				.container.form-container
+					+form-wrap
+						+e.row.row
+							.col-auto
+								+input("Выберите направление", 'text', 'Куда поедем?')
+							.col-auto
+								+input("Любая",'date', 'Дата заезда')(required readonly autocomplete="off"  class="date-input" value="22.03.2024")
+							.col-3
+								+input('Любое', 'number', 'Кол-во дней')
+							.col-auto
+								+e.btn.btn.btn-warning.small найти туры
+									+icon('search')
 			.container
 				+e.row.row
 					+headerItem('holiday', 'туры на праздники')

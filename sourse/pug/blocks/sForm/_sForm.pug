@@ -2,15 +2,18 @@ mixin sForm()
 	// start sForm
 	+b.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			+e.row.row
 			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+input("",'')
+				+e.row.row
+					+e.col.col-md-6
+						+e.content
+							.h3 Подписаться на рассылку
+							+in-c('radio','Как турагенство')(checked)
+							+in-c('radio','Как турист')
+							+policy
+					+e.col.col-md-6
+						+input("Ваш email",'email','')
+						+input("Название турагенства", 'text', '')
+						+input("Ваш город", 'text', '')
 				+e.btn.btn.btn-warning(type="submit") подписаться
-				+policy
+				+e.img-wrap: +img('img/email-bg.png', 'bg')
 	// end sForm

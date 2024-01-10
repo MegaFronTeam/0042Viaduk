@@ -1,7 +1,7 @@
 // start .sSearchTrip
 .sSearchTrip {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(90)};
+	--sPB: #{rem(50)};
 	// --sTPB: #{rem()};
 	
 	&__row{
@@ -17,19 +17,26 @@
 	&__item{
 		
 	}
-  .radio-buttons {
-    margin-bottom: rem(20);
+  &__input-wrap {
+    margin-bottom: rem(35);
+    margin-left: rem(15);
   }
   &__city {
     background: $white;
-    padding: rem(20) rem(30);
+    padding: rem(12) rem(20);
     border-radius: rem(30);
     display: block;
+    @include media-breakpoint-up(sm) {
+      padding: rem(20) rem(30);
+    }
   }
   &__swiper {
     overflow: hidden;
     position: relative;
-    padding-bottom: rem(40);
+    @include media-breakpoint-up(md) {
+      padding-bottom: rem(40);
+    }
+    
   }
   .swiper-wrapper {
     // width: 100%;
@@ -44,32 +51,49 @@
     // margin-top: 0 !important;
   }
   .swiper-grid-column>.swiper-wrapper {
-    flex-direction: row;
+    // flex-direction: row;
+    height: rem(180);
+    @include media-breakpoint-up(sm) {
+      height: rem(243);
+    }
   }
   &__arrow-wrap {
     position: relative;
-    width: rem(154);
+    width: rem(110);
     z-index: 5;
     padding-left: rem(20);
-    padding-right: rem(20);
-    height: calc(33.3333% - 20px);
-    background-color: $body-bg;
+    padding-right: rem(40);
+    
     border-radius: rem(30);
+    height: rem(60);
     @include media-breakpoint-down(md) {
       margin: 0 auto;
-    }
-    .swiper-button-hand-next {
-      right: 20%;
-    }
-    .swiper-button-hand-prev {
-      left: 20%;
+      margin-top: rem(20);
     }
     @include media-breakpoint-up(md) {
+      background-color: $body-bg;
       position: absolute;
       height: calc(33.3333% - 20px);
-      width: calc(25% - 20px);
-      right: 0;
-      bottom: calc(30% - 30px);
+      width: 33%;
+      right: rem(-12);
+      bottom: calc(33% - 60px);
+      .swiper-button-hand-next {
+        right: 13%;
+      }
+      .swiper-button-hand-prev {
+        left: 13%;
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      width: 25%;
+      right: rem(-12);
+      bottom: calc(33% - 60px);
+      .swiper-button-hand-next {
+        right: 24%;
+      }
+      .swiper-button-hand-prev {
+        left: 22%;
+      }
     }
   }
   // .swiper-button-hand {

@@ -23,7 +23,11 @@
     color: $white;
     text-transform: uppercase;
     font-weight: 500;
+    &:hover {
+      background: $primary;
+    }
 	}
+  
 }
 
 
@@ -55,16 +59,19 @@
 	span {
 		@include a-cent(y);
 		display: block;
+    border-radius: rem(10);
 	}
 
 	span:before { 
 		top: var(--position);
 		transform: rotate3d(0,0,1, var(--rotate, 0));
+    border-radius: rem(10);
 	}
 
 	span:after {
 		bottom: var(--position);
 		transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
+    border-radius: rem(10);
 	}
 	span,
 	span:after,
@@ -77,6 +84,13 @@
 		backface-visibility: hidden; 
 		transform-origin: 50% 50%;
 	} 
+}
+.menu-mobile__inner {
+  @include media-breakpoint-up(lg) {
+    .contacts {
+      display: none;
+    }
+  }
 }
 @include media-breakpoint-down(lg) {
 
@@ -92,7 +106,7 @@
 		top: 0;
 		// left: 0;
 		right: 0;
-		background-color: $body-bg;
+		background-color: $warning;
 		&:not(.active){
 			transform: translate3d(120%, 0,0);
 			--opacity: 0;
@@ -123,6 +137,51 @@
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
 			height: 100vh;
+      
+      .contacts {
+        margin-top: rem(20);
+        padding-left: rem(10);
+      }
+      .contacts-item {
+        display: flex;
+        gap: rem(10);
+        .icon {
+          // color: $primary;
+          fill: $warning;
+          font-size: rem(36);
+          padding: rem(6);
+          background-color: $body-bg;
+          border-radius: 50%;
+        }
+        a {
+          color: $gray-800;
+          font-size: $small;
+          &:not(:last-child) {
+            margin-bottom: rem(20);
+          }
+        }
+        &__schedule {
+          font-size: $small;
+          color: $gray-800;
+        }
+        &__tel {
+          max-width: rem(178);
+          padding-left: 0;
+          // padding-bottom: rem(5);
+        }
+        p {
+          font-size: $small;
+          color: $gray-800;
+          margin-bottom: rem(8);
+          font-weight: 700;
+        }
+        
+      }
+      .top-nav__btn {
+        margin-top: rem(20);
+        --bs-btn-padding-y: #{rem(10)};
+        --bs-btn-padding-x: #{rem(20)};
+      }
 			// @include mt(.3s);
 			// transition-delay: .4s;
 			// opacity: var(--opacity);
