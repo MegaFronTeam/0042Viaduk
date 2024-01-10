@@ -1,9 +1,40 @@
+
+mixin saleItem(sale, descr)
+	+b.sale-item
+		+e.title!= sale
+		+e.descr!= descr
+		//order-2 order-sm-2 order-lg-1
 mixin sAdvs(data)
 	// start sAdvs
 	+b.SECTION.sAdvs.section#sAdvs&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sAdvs
-				
+				h2 Наши преимущества
 			+e.row.row
+				.col-auto.col-sm-5.col-md-4.col-xl-3.order-1.order-xl-0
+					+e.wrap.map
+						+e.title Более 400 туров по России и СНГ
+						+e.map-wrap: +img('img/adv-map.png', 'bg')
+				.col-12.col-xl-7
+					+e.wrap.booking
+						+e.title Онлайн-бронирование
+						+e.btn-wrap.text-center
+							+e.btn.btn.btn-warning.small для турагентств
+								+icon('adv-1')
+							+e.btn.btn.btn-warning.small для туристов
+								+icon('adv-2')
+					+e.wrap.sale
+						+e.content
+							.h3 Наши скидки
+							+saleItem('3%', 'выкуп в день брони')
+							+saleItem('2%', 'заказ тура онлайн')
+							+icon('sale')
+						+e.img-wrap: +img('img/adv-bg.png', 'bg')
+				.col-auto.col-sm-5.col-md-4.col-xl-2
+					+e.wrap.delivery
+						+icon('delivery')
+						+e.title Доставка:
+						.small Офис на Садовом кольце
+						.small Доставка тура курьером
+						+e.subtext.smallest Доставим в любую точку Москвы и Подмосковья
 	// end sAdvs
