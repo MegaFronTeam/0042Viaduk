@@ -45,7 +45,7 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sMap/_sMap.scss';
 @import '../pug/blocks/sContact/_sContact.scss';
 // @import '../pug/blocks/header/_header.scss';
-// @import '../pug/blocks/footer/_footer.scss';
+@import '../pug/blocks/footer/_footer.scss';
 
 // @import "media"; // Всегда в конце
 

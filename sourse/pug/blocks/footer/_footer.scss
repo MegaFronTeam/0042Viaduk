@@ -1,14 +1,38 @@
 
 .footer {
 	margin-top: auto;
-// --sPT: #{rem()};
-	// --sPB: #{rem()};
+  --sPT: #{rem(90)};
+	--sPB: #{rem(90)};
 	// --sTPB: #{rem()};
+  background: $gray-800;
 	&__row{
-		// --bs-gutter-x: #{rem()};
+		--bs-gutter-x: #{rem(20)};
 		--bs-gutter-y: var(--bs-gutter-x);
-
+    margin-bottom: rem(40);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(5);
+    }
 	}
+  a,
+  p {
+    color: $gray-100;
+  }
+  li:not(:last-child) {
+    padding-bottom: rem(5);
+  }
+  ul {
+    margin-bottom: 0;
+  }
+  .trip-item:hover {
+    color: var(--accent-dark);
+  }
+  .link-item {
+    color: $warning;
+    &:hover {
+      color: var(--accent-dark);
+      }
+  }
+  
 	// .section-title{
 
 	// }
@@ -18,9 +42,69 @@
 	// &__item{
 
 	// }
+  &__img-wrap {
+    img {
+      max-width: 46%;
+      @include media-breakpoint-up(sm) {
+        max-width: 100%;
+      }
+    }
+    img:first-child {
+      margin-right: rem(18);
+      margin-bottom: 0;
+      @include media-breakpoint-up(sm) {
+        margin-bottom: rem(18);
+      }
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 0;
+      }
+    }
+  }
 	&__slide{
 		height: auto;
 	}
+  &__trips {
+    display: flex;
+    gap: rem(30);
+    flex-wrap: wrap;
+    row-gap: rem(20);
+    @include media-breakpoint-up(lg) {
+      row-gap: 0;
+      padding-left: rem(10);
+    }
+    @include media-breakpoint-up(md) {
+      max-width: 90%;
+    }
+  }
+  .info {
+    margin-bottom: rem(50);
+    @include media-breakpoint-up(xl) {
+      p {
+        max-width: 81%;
+      }
+    }
+    &__title {
+      color: $warning;
+      margin-bottom: rem(10);
+    }
+  }
+  &__cards {
+    p {
+      margin-bottom: rem(10);
+      }
+  }
+  &__pay-wrap {
+    img:not(:last-child) {
+      margin-right: rem(11);
+      margin-bottom: rem(11);
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__copyright {
+    color: $gray-300;
+  }
 // 
 @include media-breakpoint-up(xl) {}
 

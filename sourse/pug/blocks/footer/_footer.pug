@@ -1,9 +1,39 @@
+mixin tripItem(text)
+	li: a(href="#").trip-item.small!= text
+
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
+			+e.row.row
+				.col-12.col-sm-3.col-xl-4
+					+e.img-wrap
+						+img('img/footer-1.png')
+						+img('img/footer-2.png')
 				.col
-					
-				.col Footer
-				.col
-				.col-auto
+					+e.trips
+						ul
+							+tripItem('Туры в Армению')
+							+tripItem('Туры в Белоруссию')
+							+tripItem('Туры в Грузию')
+							+tripItem('Туры в Молдавию')
+						ul
+							+tripItem('Корпоративные туры по Росси')
+							+tripItem('Туры по Золотому кольцу')
+							+tripItem('Туры в Москву')
+							+tripItem('Туры в Санкт-петербург')
+							+tripItem('Для турагентств')
+						ul
+							li: a(href="#").link-item Где купить?
+							li: a(href="#").link-item Как оплатить?
+				.col-5.col-md-4.col-lg-3
+					+b.info.small
+						+e.title Внимание
+						p Если вы покупаете тур в день бронирования (забронировать можно по телефону, факсу или E-mail),то вы получаете скидку 3%
+					+e.cards.small
+						p Мы принимаем:
+						+e.pay-wrap
+							+img('img/pay-1.png')
+							+img('img/pay-2.png')
+							+img('img/pay-3.png')
+							+img('img/pay-4.png')
+			+e.copyright.smallest © 2008-2023 Виадук Тур - Туры по России и СНГ
