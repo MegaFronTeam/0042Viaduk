@@ -17,3 +17,28 @@ mixin sForm()
 				+e.btn.btn.btn-warning(type="submit") подписаться
 				+e.img-wrap: +img('img/email-bg.png', 'bg')
 	// end sForm
+
+mixin sForm2()
+	// start sForm
+	+b.sForm.section#sForm2&attributes(attributes).bg-wrap
+		+img('img/form-bg.png', 'bg').picture-bg
+		.container
+			+form-wrap
+				+e.title
+					.h3 Не смогли найти подходящий тур по России на сайте?
+					.wrap
+						+icon('form-arr')
+						p Мы подберем его по телефону!
+					+e.btn.btn.btn-warning.small заказать звонок
+				+e.row.row
+					+e.col.col-md-6
+						+input("Ваш имя*",'text','')
+						+input("Ваш телефон*", 'tel', '')
+						+input("Ваш Email", 'email', '')
+					+e.col.col-md-6
+						+e.content
+							+input("Ваш вопрос*", 'textarea', '')
+				+policy
+				+e.btn.btn.btn-warning(type="submit") отправить
+				+e.img-wrap: +icon('phone-bg')
+	// end sForm

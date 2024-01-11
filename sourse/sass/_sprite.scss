@@ -67,6 +67,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-form-arr {
+	$h: 60;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(60 / #{$h} *1em );
+}
 .icon-holiday {
 	$h: 30;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -81,6 +86,11 @@
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
+}
+.icon-phone-bg {
+	$h: 222;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(336 / #{$h} *1em );
 }
 .icon-sale {
 	$h: 87;
