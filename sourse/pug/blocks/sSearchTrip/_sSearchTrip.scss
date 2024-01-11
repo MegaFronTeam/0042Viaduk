@@ -19,14 +19,17 @@
 	}
   &__input-wrap {
     margin-bottom: rem(20);
-    margin-left: rem(15);
+    margin-right: rem(15);
+    // margin-left: rem(15);
   }
-  .col-auto {
+  .custom-input {
+    transition: all .36s ease-in-out;
     &:hover {
       background: $gray-200;
     }
     padding: rem(15);
     padding-right: rem(20);
+    padding-left: rem(40);
     border-radius: rem(30);
   }
   &__city {
