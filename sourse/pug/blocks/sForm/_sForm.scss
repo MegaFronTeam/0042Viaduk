@@ -53,8 +53,12 @@
       max-width: max-content;
     }
     &__input-wrap {
+      border-radius: rem(20);
       &:not(:last-child) {
         margin-bottom: rem(15);
+      }
+      &:hover{
+        box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
       }
     }
     &__btn {

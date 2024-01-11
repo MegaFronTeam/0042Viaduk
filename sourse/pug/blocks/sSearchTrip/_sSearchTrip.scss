@@ -2,7 +2,7 @@
 .sSearchTrip {
 	--sPT: #{rem(90)};
 	--sPB: #{rem(50)};
-	// --sTPB: #{rem()};
+	--sTPB: #{rem(27)};
 	
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -18,8 +18,16 @@
 		
 	}
   &__input-wrap {
-    margin-bottom: rem(35);
+    margin-bottom: rem(20);
     margin-left: rem(15);
+  }
+  .col-auto {
+    &:hover {
+      background: $gray-200;
+    }
+    padding: rem(15);
+    padding-right: rem(20);
+    border-radius: rem(30);
   }
   &__city {
     background: $white;
@@ -29,6 +37,9 @@
     @include media-breakpoint-up(sm) {
       padding: rem(20) rem(30);
     }
+    &:hover {
+      box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
+    }
   }
   &__swiper {
     overflow: hidden;
@@ -36,22 +47,13 @@
     @include media-breakpoint-up(md) {
       padding-bottom: rem(40);
     }
-    
   }
   .swiper-wrapper {
-    // width: 100%;
-    // height: 100%;
-    // margin-left: auto;
-    // margin-right: auto;
     a {
       color: $gray-700;
     }
   }
-  .swiper-slide {
-    // margin-top: 0 !important;
-  }
   .swiper-grid-column>.swiper-wrapper {
-    // flex-direction: row;
     height: rem(180);
     @include media-breakpoint-up(sm) {
       height: rem(243);
@@ -63,7 +65,6 @@
     z-index: 5;
     padding-left: rem(20);
     padding-right: rem(40);
-    
     border-radius: rem(30);
     height: rem(60);
     @include media-breakpoint-down(md) {
@@ -95,6 +96,9 @@
         left: 22%;
       }
     }
+  }
+  .swiper-button-hand:hover .icon {
+    stroke: $gray-400;
   }
   // .swiper-button-hand {
   //   border: none;

@@ -32,6 +32,7 @@
     background: $gray-200;
     padding-bottom: rem(20);
     overflow: hidden;
+    display: block;
     height: 100%;
     &__img-wrap {
       @include block(140, 250);
