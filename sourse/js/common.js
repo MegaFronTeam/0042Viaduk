@@ -119,6 +119,44 @@ function eventHandler() {
     //   clickable: true,
     // },
   });
+  const swiperBlog = new Swiper(".sBlog__swiper--js", {
+    slidesPerView: 1,
+    // grid: {
+    //   rows: 3,
+    // },
+    spaceBetween: 30,
+    navigation: {
+			nextEl: '.sBlog__swiper .swiper-button-next',
+			prevEl: '.sBlog__swiper .swiper-button-prev',
+		},
+    // breakpoints: {
+    //   768: {
+    //     spaceBetween: 30,
+    //     slidesPerView: 3,
+    //     grid: {
+    //       rows: 3,
+    //     },
+    //   },
+    //   1200: {
+    //     slidesPerView: 4,
+    //     grid: {
+    //       rows: 3,
+    //     },
+    //   },
+    // }
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    pagination: {
+			el: " .swiper-pagination",
+			type: "bullets",
+			clickable: true,
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '">' + (index + 1) + '</span>';
+			}
+		},
+  });
   //     --bs-breakpoint-xs: 0;
     // --bs-breakpoint-sm: 576px;
     // --bs-breakpoint-md: 768px;

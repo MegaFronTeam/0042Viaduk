@@ -2,7 +2,7 @@
 
 .sBlog {
   --sPT: #{rem(0)};
-    // --sPB: #{rem(90)};
+  --sPB: #{rem(85)};
       // --sTPB: #{rem()};
     
   &__row {
@@ -13,8 +13,11 @@
   }
   &__btn {
     width: 100%;
-    margin-bottom: rem(50);
+    margin-bottom: rem(90);
     --bs-btn-padding-y: #{rem(10)};
+  }
+  &__col-main {
+    position: relative;
   }
   .blog-card {
     background: $white;
@@ -33,14 +36,8 @@
       margin-bottom: rem(50);
     }
     &__img-wrap {
-      // min-width: rem(330);
       @include block(314, 330);
       width: 100%;
-      @include media-breakpoint-up(md) {
-        // min-width: rem(330);
-        // width: auto;
-        // height: 100%;
-      }
       @include media-breakpoint-up(md) {
         min-width: rem(330);
         width: auto;
@@ -98,6 +95,45 @@
         width: rem(45);
         margin-left: rem(10);
       }
+    }
+  }
+  // .swiper-button-hand
+  &__swiper--js {
+    overflow: hidden;
+  }
+  .swiper-button-hand {
+    margin: 0;
+    margin-top: auto;
+    --swiperArrowPosition: #{3%};
+    --swiperArrowSize: #{rem(45)};
+    @include media-breakpoint-up(sm) {
+      --swiperArrowSize: #{rem(50)};
+    }
+    @include media-breakpoint-up(md) {
+      --swiperArrowPosition: #{25%};
+    }
+    @include media-breakpoint-up(xl) {
+      --swiperArrowPosition: #{32%};
+    }
+  }
+  .swiper-button-hand-next {
+    // right: 10%;
+  }
+  .swiper-pagination-bullet {
+    width: rem(33);
+    height: rem(33);
+    background: $white;
+    color: $gray-700;
+    font-weight: 600;
+    font-size: $small;
+    line-height: 2.5;
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+    &-active {
+      background: $primary;
+      color: $white;
     }
   }
 }
