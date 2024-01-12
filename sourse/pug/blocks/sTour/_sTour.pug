@@ -1,0 +1,38 @@
+
+
+mixin sTour(data)
+	// start sTour
+	+b.SECTION.sTour.section#sTour&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col-main.col-lg-9
+					+e.wrap
+				+e.col-aside.col-auto.col-lg-3
+					+e.wrap.small
+						+e.item
+							+e.btn.btn.btn-warning от 16 500 руб./чел.
+								| Смотреть все цены
+							+e.btn.btn.btn-warning Забронировать онлайн
+							+e.icons
+								+e.icon-wrap
+									+icon('like')
+									p Отложить
+								+e.icon-wrap
+									+icon('card')
+									p Оплатить картой
+								+e.icon-wrap
+									+icon('doc')
+									p Скачать в.doc
+							+e.info
+								span Внимание <br>
+								| Если вы покупаете тур в день бронирования (забронировать можно по телефону, факсу или email), то вы получаете скидку 3%
+						+e.item
+							+sameTour('1', 'Праздничный тур на 3 дня Ярославль – Кострома – Нерехта')
+							+sameTour('2', 'Тур на 2 дня Шуя - Палех - Иваново «Ивановские «манеры»')
+							+sameTour('3', 'Тур на 2 дня Палех-Шуя-Иваново 02-03.01, 04-05.01, 05-06.01.2024')
+
+mixin sameTour(img, descr)
+	+b.same-tour(href='#').smallest
+		+img(`img/same-tour-${img}.png`)
+		p!= descr
+	// end sTour
