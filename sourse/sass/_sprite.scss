@@ -22,6 +22,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(20 / #{$h} *1em );
 }
+.icon-baggage {
+	$h: 274;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(274 / #{$h} *1em );
+}
 .icon-basket {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);

@@ -1,0 +1,40 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+include ../blocks/sProductSlider/_sProductSlider.pug
+include ../blocks/sSearchTrip/_sSearchTrip.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sAdvs/_sAdvs.pug
+include ../blocks/sArticle/_sArticle.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sMap/_sMap.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Блог'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	+page-head2('Блог о путешествиях', withIcon=true, 'Блог')
+		+icon('baggage')
+	main
+		+sBlog
+		+sForm2()
+		+sForm()
+		+sContact()
+		
+	+parts('footer')

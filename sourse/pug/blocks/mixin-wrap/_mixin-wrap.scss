@@ -182,4 +182,23 @@
       color: $white;
     }
   }
+  .icon-baggage {
+    position: absolute;
+    // bottom: -80%;
+    fill: $white;
+    opacity: .5;
+    // left: 47%;
+    display: none;
+    z-index: 1;
+    @include media-breakpoint-up(md) {
+      bottom: -80%;
+      display: block;
+      left: 61%;
+      font-size: rem(260);
+    }
+    @include media-breakpoint-up(lg) {
+      left: 47%;
+      font-size: rem(270);
+    }
+  }
 }

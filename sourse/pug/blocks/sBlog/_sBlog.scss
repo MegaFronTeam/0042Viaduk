@@ -1,0 +1,104 @@
+	// start .sBlog
+
+.sBlog {
+  --sPT: #{rem(0)};
+    // --sPB: #{rem(90)};
+      // --sTPB: #{rem()};
+    
+  &__row {
+    position: relative;
+    z-index: 1;
+    // --bs-gutter-x: #{rem()};
+    --bs-gutter-y: #{rem(70)};
+  }
+  &__btn {
+    width: 100%;
+    margin-bottom: rem(50);
+    --bs-btn-padding-y: #{rem(10)};
+  }
+  .blog-card {
+    background: $white;
+    border-radius: rem(30);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
+    &:hover {
+      box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
+    }
+    margin-bottom: rem(30);
+    &:last-child {
+      margin-bottom: rem(50);
+    }
+    &__img-wrap {
+      // min-width: rem(330);
+      @include block(314, 330);
+      width: 100%;
+      @include media-breakpoint-up(md) {
+        // min-width: rem(330);
+        // width: auto;
+        // height: 100%;
+      }
+      @include media-breakpoint-up(md) {
+        min-width: rem(330);
+        width: auto;
+      }
+    }
+    &__content {
+      padding: rem(20);
+      @include media-breakpoint-up(md) {
+        padding: rem(30);
+      }
+    }
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $gray-300;
+      &:not(:last-child) {
+        margin-bottom: rem(30);
+      }
+      flex-wrap: wrap;
+      gap: rem(20);
+      .icon {
+        margin-right: rem(10);
+        transform: translateY(rem(-1));
+      }
+      span {
+        color: $gray-700;
+        font-weight: 700;
+        margin-right: rem(10);
+      }
+    }
+    .h3 {
+      line-height: 1.2;
+      margin-bottom: rem(10);
+      color: $gray-800;
+    }
+    p {
+      color: $gray-400;
+      margin-bottom: rem(30);
+      font-size: $small;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    span {
+      font-weight: 600;
+    }
+    &__btn {
+      text-transform: none;
+      --bs-btn-padding-x: #{rem(20)};
+      --bs-btn-padding-y: #{rem(10)};
+      .icon {
+        width: rem(45);
+        margin-left: rem(10);
+      }
+    }
+  }
+}
+	// end .sBlog
