@@ -156,3 +156,30 @@
 	content: url("data:image/svg+xml,%3Csvg width='7' height='8' viewBox='0 0 7 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.81191 4.56199C6.25248 4.31713 6.25248 3.68342 5.81191 3.43827L1.20419 0.876845C0.727906 0.611987 0.142763 0.956273 0.142763 1.50113L0.142762 6.49913C0.142762 7.0437 0.727905 7.38799 1.20419 7.12342L5.81191 4.56199Z' fill='%23E7E7E7'/%3E%3C/svg%3E");
 	margin-right: rem(8);
 }
+
+.page-head {
+  background: $primary;
+  padding-top: rem(23);
+  padding-bottom: rem(23);
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(100% - rem(1));
+    left: 0;
+    width: 100%;
+    height: rem(69);
+    background: inherit;
+    z-index: 1;
+  }
+  h1 {
+    color: $white;
+    font-weight: 600;
+  }
+  span {
+    color: $gray-200;
+    &:hover {
+      color: $white;
+    }
+  }
+}

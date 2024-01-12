@@ -1,0 +1,39 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+include ../blocks/sProductSlider/_sProductSlider.pug
+include ../blocks/sSearchTrip/_sSearchTrip.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sAdvs/_sAdvs.pug
+include ../blocks/sArticle/_sArticle.pug
+include ../blocks/sMap/_sMap.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Детальная страница статьи'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	+page-head('Туры по Золотому кольцу России', 'Туры по Золотому кольцу России')
+	main
+		+sArticle
+
+		+sForm2()
+		+sForm()
+		+sContact()
+		
+	+parts('footer')
