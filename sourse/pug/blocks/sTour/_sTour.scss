@@ -36,12 +36,20 @@
       color: $gray-800;
     }
     &__content {
+      position: relative;
       & > :not(:last-child) {
         margin-bottom: rem(30);
       }
     }
+    .h3 {
+      max-width: calc(100% - rem(65));
+    }
   }
-  
+  &__vk {
+    position: absolute;
+    right: 0;
+    top: rem(-20);
+  }
   
 
   
@@ -260,6 +268,43 @@
   .reviews {
     .btn {
       width: rem(220);
+    }
+  }
+  &__input-wrap {
+    // background-color: $body-bg;
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+    .radio-wrap {
+      display: flex;
+      margin-bottom: rem(10);
+      flex-wrap: wrap;
+      
+      .custom-input {
+        padding: rem(7);
+        padding-right: rem(20);
+        padding-left: rem(40);
+        @include media-breakpoint-up(sm){
+          padding: rem(14);
+          padding-right: rem(20);
+          padding-left: rem(40);
+        }
+      }
+    }
+    .btn {
+      width: rem(220);
+    }
+    
+    textarea {
+      min-height: rem(210);
+    }
+  }
+  &__form-row {
+    --bs-gutter-x: #{rem(20)};
+    --bs-gutter-y: #{rem(20)};
+    @include media-breakpoint-up(md) {
+      --bs-gutter-x: #{rem(20)};
+      --bs-gutter-y: #{rem(28)};
     }
   }
 
