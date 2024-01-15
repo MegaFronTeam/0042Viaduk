@@ -74,6 +74,11 @@ function eventHandler() {
 			clickable: true,
 		},
 	})
+  const swiperTabs = new Swiper('.tabs-slider--js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true
+	});
 
   new Swiper('.sProductSlider__swiper--js', {
 		freeMode: true,

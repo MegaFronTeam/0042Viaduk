@@ -19,3 +19,52 @@ mixin ddGroupItem(txt, activeClasses='')
 			else
 				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.
 				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.
+
+mixin ddGroup2()
+	//-родителю елементов .dd-group-js
+	+b.dd-group.dd-group-js.--tour
+		if block
+			block
+		else
+			+ddGroupItem2('active')
+			+ddGroupItem2()
+			+ddGroupItem2()
+
+mixin ddGroupItem2(title, activeClasses='')
+	//-хедеру и контенту => .dd-head-js, .dd-content-js
+	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
+	+e.item(class=activeClasses)
+		+e.head.dd-head-js
+			+ddGroupHead(title)
+		+e.content.dd-content-js(class=activeClasses)
+			if block
+				block
+			else
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.
+
+mixin ddGroupHead(title)
+	+e.head-wrap
+		span
+			+icon('calendar')
+			| День 1
+		p!= title
+
+mixin ddGroupItem3(bTitle, title, activeClasses='')
+	//-хедеру и контенту => .dd-head-js, .dd-content-js
+	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
+	+e.item(class=activeClasses)
+		+e.head.dd-head-js
+			+ddGroupHead3(bTitle, title)
+		+e.content.--sm.dd-content-js(class=activeClasses)
+			if block
+				block
+			else
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.
+
+mixin ddGroupHead3(bTitle, title)
+	+e.head-wrap.--sm
+		span
+			+icon('hotel')
+		+e.title!= bTitle
+			p!= title
