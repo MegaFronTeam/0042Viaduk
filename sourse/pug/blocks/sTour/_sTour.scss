@@ -30,11 +30,27 @@
       &:hover {
         color: $gray-800;
       }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: transparent;
+        @include mt;
+      }
+      &.active {
+        color: $black;
+        &::after {
+          background-color: $warning;
+        }
+      }
     }
-    .swiper-slide-active {
-      border-bottom: rem(2) solid $warning;
-      color: $gray-800;
-    }
+    // .swiper-slide .active {
+    //   border-bottom: rem(2) solid $warning;
+    //   color: $gray-800;
+    // }
     &__content {
       position: relative;
       & > :not(:last-child) {
@@ -265,9 +281,23 @@
       padding: rem(50);
     }
   }
+  .inform {
+    .dd-group__item:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+    .dd-group__content {
+      padding-top: rem(45);
+    }
+  }
   .reviews {
     .btn {
       width: rem(220);
+    }
+  }
+  .calc {
+    .h3 {
+      margin-top: rem(50);
+      margin-bottom: 0;
     }
   }
   &__input-wrap {
@@ -279,7 +309,6 @@
       display: flex;
       margin-bottom: rem(10);
       flex-wrap: wrap;
-      
       .custom-input {
         padding: rem(7);
         padding-right: rem(20);
@@ -294,7 +323,6 @@
     .btn {
       width: rem(220);
     }
-    
     textarea {
       min-height: rem(210);
     }
