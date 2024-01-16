@@ -5,9 +5,10 @@ mixin product-card(i, t, p ,btn)
 			.img-wrap-center
 				+img(`img/catalog-${i}.png`)
 		+e.caption
-			+e.descr-wrap
+			+e.title-w
 				+e.title!= t
-				+e.text.small!= p
+				if p
+					+e.text.small!= p
 			+e.btn.btn.btn-warning.small.fw-300!= btn
 				+icon('chevron-right')
 	// /.product-card

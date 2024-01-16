@@ -260,21 +260,21 @@
     display: flex;
     color: $gray-400;
     align-items: center;
+    .active .icon-rate-star {
+      fill: $warning;
+    }
   }
   &__item-stars {
     display: flex;
     margin-right: rem(10);
     gap: rem(5);
-    .icon {
+    .icon-rate-star {
       fill: $gray-200;
       &:hover {
         fill: $warning;
       }
     }
-    &.active {
-      fill: $warning !important;
-      color: $warning;
-    }
+    
   }
   .schedule {
     &__title {
