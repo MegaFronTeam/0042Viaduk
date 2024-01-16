@@ -1,25 +1,121 @@
 // start .sCatalog
 .sCatalog {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
-
-	}
-	.section-title{
-		
-	}
-	&__col{
-
-	}
-	&__item{
-
-	}
-	&__slide{
-		height: auto;
-	}
+	--sPT: #{rem(0)};
+  --sPB: #{rem(135)};
+      // --sTPB: #{rem()};
+    
+  &__row {
+    position: relative;
+    z-index: 1;
+    // --bs-gutter-x: #{rem()};
+    --bs-gutter-y: #{rem(70)};
+  }
+  li {
+    display: flex;
+    gap: rem(5);
+    align-items: center;
+    span {
+      font-weight: 700;
+    }
+    .smallest {
+      color: $gray-400;
+    }
+  }
+  &__btn {
+    width: 100%;
+    margin-bottom: rem(90);
+    --bs-btn-padding-y: #{rem(10)};
+  }
+  &__col-main {
+    position: relative;
+  }
+  
+  // .swiper-button-hand
+  &__swiper--js {
+    overflow: hidden;
+  }
+  .swiper-slide {
+    height: 100%;
+  }
+  .swiper-button-hand {
+    margin: 0;
+    margin-top: auto;
+    --swiperArrowPosition: #{3%};
+    --swiperArrowSize: #{rem(45)};
+    @include media-breakpoint-up(sm) {
+      --swiperArrowSize: #{rem(50)};
+    }
+    @include media-breakpoint-up(md) {
+      --swiperArrowPosition: #{25%};
+    }
+    @include media-breakpoint-up(xl) {
+      --swiperArrowPosition: #{32%};
+    }
+  }
+  .swiper-button-hand-next {
+    // right: 10%;
+  }
+  .swiper-pagination-bullet {
+    width: rem(33);
+    height: rem(33);
+    background: $white;
+    color: $gray-700;
+    font-weight: 600;
+    font-size: $small;
+    line-height: 2.5;
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+    &-active {
+      background: $primary;
+      color: $white;
+    }
+  }
+  .swiper-wrapper__tour {
+    height: rem(1180);
+    margin-bottom: rem(50);
+  }
+  .rev-wrap {
+    &__rev-title-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: rem(30);
+    }
+    &__btn {
+      width: rem(220);
+    }
+  }
+  .review-card {
+    padding: rem(20);
+    padding-bottom: rem(10);
+    max-width: none;
+    background: $white;
+    border-radius: rem(30);
+    width: 100%;
+    margin-bottom: 0;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
+    @include media-breakpoint-up(sm) {
+      width: 100%;
+    }
+    @include media-breakpoint-up(md) {
+      padding: rem(30);
+      padding-bottom: rem(18);
+    }
+    p {
+      margin-bottom: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 7;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @include media-breakpoint-up(md) {
+        -webkit-line-clamp: 3;
+      }
+    }
+  }
+  
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -32,22 +128,56 @@
 
 
 
-.product-item{
-	display: flex;
-	flex-direction: column;
-	min-height: 100%;
-	background: #FFFFFF; 
-	border: 1px solid #E2E2E2;
-	border-radius: 15px;
+.product-card {
+  min-height: 100%;
+  height: max-content;
+	background: $white;
+	border-radius: rem(30);
 	overflow: hidden;
-	position: relative;
+	// position: relative;
+  display: block;
+  img {
+    transition: all .3s ease-in-out;
+  }
+  &:hover {
+    .product-item__img-wrap {
+      box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.30);
+    }
+    img {
+      scale: 1.05;
+    }
+  }
 	&__img-wrap{
-		@include block(298, 190);
+    transition: all .3s ease-in-out;
+		@include block(200, 282);
+    border-radius: rem(30);
+    overflow: hidden;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
 	}
+  &__descr-wrap {
+    margin-bottom: rem(20);
+  }
+  &__title {
+    font-weight: 700;
+    color: $gray-800;
+    margin-bottom: rem(5);
+  }
 	&__caption{
-		flex-grow: 1;
-		display: flex;
-		flex-direction: column;
+    height: 100%;
 		padding: rem(20);
 	}
+  &__text {
+    color: $gray-400;
+  }
+  &__btn {
+    // margin-top: auto;
+    margin-bottom: 0;
+    text-transform: none;
+    width: 100%;
+    --bs-btn-padding-y: #{rem(10)};
+    .icon {
+      font-size: rem(10);
+      margin-left: rem(10);
+    }
+  }
 }

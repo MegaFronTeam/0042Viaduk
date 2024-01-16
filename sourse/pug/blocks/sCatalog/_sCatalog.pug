@@ -1,41 +1,103 @@
-mixin product-item(i, t, p ,pr)
-	+b.ARTICLE.product-item
-		+e.img-wrap(href="#")
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
-		+e.caption
-			+e.title!= t
-			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
-	// /.product-item
 
-mixin sCatalog(h2)
+mixin product-card(i, t, p ,btn)
+	+b.product-card(href='#')
+		+e.img-wrap
+			.img-wrap-center
+				+img(`img/catalog-${i}.png`)
+		+e.caption
+			+e.descr-wrap
+				+e.title!= t
+				+e.text.small!= p
+			+e.btn.btn.btn-warning.small.fw-300!= btn
+				+icon('chevron-right')
+	// /.product-card
+
+mixin sCatalog()
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
-
 			+e.row.row
-				- const wrapClass="col-3"
-				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`2`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`5`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`6`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`7`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`8`,``,``,``) 
+				+e.col-aside.col-auto.col-lg-3.small
+					+ddGroup
+						+ddGroupItem('Регулярные туры', 'active')
+							ul
+								li 
+									span По России 
+									.smallest (по алфавиту)
+								li: a(href='#') Астрахань
+								li: a(href='#') Байкал
+								li: a(href='#') Великий Устюг
+								li: a(href='#') Вологда
+								li: a(href='#') Золотое Кольцо
+								li: a(href='#') Кавказ
+								li: a(href='#') Казань
+								li: a(href='#') Калининградская область
+								li: a(href='#') Камчатка
+								li: a(href='#') Карелия
+								li: a(href='#') Крым
+								li 
+									span По СНГ
+								li: a(href='#') Белоруссия
+						+ddGroupItem('Другие туры')
+							ul
+								li: a(href='#') Астрахань
+								li: a(href='#') Байкал
+								li: a(href='#') Великий Устюг
+								li: a(href='#') Вологда
+				+e.col-main.col-lg-9
+					+e.wrap
+						+e.swiper--js
+							.swiper-wrapper.swiper-wrapper__tour
+								.swiper-slide
+									+product-card('1', 'Туры по Золотому кольцу на Новый год', '', 'Подробнее')
+								.swiper-slide
+									+product-card('2', 'Туры по Золотому кольцу на Рождество', '', 'Подробнее')
+								.swiper-slide
+									+product-card('3', 'Автобусные туры по России', 'из Москвы', 'Подробнее')
+								.swiper-slide
+									+product-card('4', 'Тур на 2 дня Палех-Шуя-Иваново', '', 'от 9900 руб.')
+								.swiper-slide
+									+product-card('5', 'Тур на 2 дня Ярославль-Кострома', 'с 23 сентября 2023г. по 21 апреля 2024г.', 'от 9000 руб.')
+								.swiper-slide
+									+product-card('6', 'Школьные туры', '', 'Подробнее')
+								.swiper-slide
+									+product-card('5', 'Тур на 3 дня Ярославль-Кострома', 'с 23 сентября 2023г. по 21 апреля 2024г.', 'от 9000 руб.')
+								.swiper-slide
+									+product-card('2', 'Туры по Золотому кольцу на Рождество', '', 'Подробнее')
+								.swiper-slide
+									+product-card('3', 'Автобусные туры по России', 'из Москвы', 'Подробнее')
+								.swiper-slide
+									+product-card('4', 'Тур на 2 дня Палех-Шуя-Иваново', '', 'от 9900 руб.')
+								.swiper-slide
+									+product-card('5', 'Тур на 2 дня Ярославль-Кострома', 'с 23 сентября 2023г. по 21 апреля 2024г.', 'от 9000 руб.')
+								.swiper-slide
+									+product-card('6', 'Школьные туры', '', 'Подробнее')
+								.swiper-slide
+									+product-card('5', 'Тур на 3 дня Ярославль-Кострома', 'с 23 сентября 2023г. по 21 апреля 2024г.', 'от 9000 руб.')
+							.swiper-pagination
+							+arrow()
+						+e.btn.btn.btn-warning показать еще
+				+b.rev-wrap.col-lg-9.offset-lg-3
+					+e.rev-title-wrap
+						.h3 Отзывы
+						+e.btn.btn.btn-warning оставить отзыв
+					+e.swiper--js
+						.swiper-wrapper
+							.swiper-slide
+								+review('Константин, Александра', '15.04.23', 'Ярославль-Кострома', 'Очень хорошие впечатления. Экскурсовод Анна Кострова - супер. Очень интересно, доходчиво, познавательно.рассказала.Доброжелательные, отзывчивые водители.Как появится возможность ещё куда-то поехать - обратимся в Виадук.')
+							.swiper-slide
+								+review('Светлана', '2-3 янв', 'иваново-палех-шуя', 'Спасибо, дорогой Виадук! Мы так хорошо прокатились коллективом в иваново. и полюбовались, и узнали много чего, и прикупили: палехские шкатулочки, шуйские ситцы. отель - очень хороший, еда - ну все прекрасно! А банкет!!! Мы к вам еще вернемся!')
+							.swiper-slide
+								+review('Ольга, Марина', '20.07.23-23.07.23', 'По "Государевой Дороге из Петербурга в Москву"', 'С 20.07.23 по 23.07.23 были на экскурсии по "Государевой Дороге из Петербурга в Москву".Благодарим экскурсовода Анну Горшкову за интересный и увлекательный рассказ. увлекательный рассказ.<br>На экскурсии бывали -<br>Очень много повидали.<br>')
 
 	// end sCatalog
+mixin review(name, date, tour, descr)
+	+b.review-card
+		+e.author
+			+e.name
+				+icon('review')
+				span!= name
+			+e.date.small!= date
+		+e.tour.small!= tour
+		+e.descr
+			p!= descr

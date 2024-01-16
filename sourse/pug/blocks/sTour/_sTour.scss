@@ -85,6 +85,7 @@
           position: absolute;
           z-index: 3;
           text-align: center;
+          cursor: pointer;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
@@ -530,6 +531,9 @@
 
 .review-card {
   max-width: rem(656);
+  span {
+    font-weight: 700;
+  }
   &:not(:last-child) {
     margin-bottom: rem(33);
   }

@@ -92,7 +92,18 @@ function eventHandler() {
 			},
 		},
 	})
-
+  new Swiper('.rev-wrap__swiper--js', {
+		freeMode: true,
+    loop: true,
+		slidesPerView: 1,
+		spaceBetween: 20,
+		breakpoints: {
+			960: {
+				spaceBetween: 30,
+				// slidesPerView: 4,
+			},
+		},
+	})
   const swiper = new Swiper(".sSearchTrip__swiper--js", {
     slidesPerView: 2,
     grid: {
@@ -153,6 +164,44 @@ function eventHandler() {
     //   el: ".swiper-pagination",
     //   clickable: true,
     // },
+    pagination: {
+			el: " .swiper-pagination",
+			type: "bullets",
+			clickable: true,
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '">' + (index + 1) + '</span>';
+			}
+		},
+  });
+  const swiperCatalog = new Swiper(".sCatalog__swiper--js", {
+    slidesPerView: 2,
+    grid: {
+      rows: 3,
+    },
+    spaceBetween: 20,
+    navigation: {
+			nextEl: '.sCatalog__swiper .swiper-button-next',
+			prevEl: '.sCatalog__swiper .swiper-button-prev',
+		},
+    breakpoints: {
+      768: {
+        spaceBetween: 30,
+        slidesPerView: 3,
+        grid: {
+          rows: 3,
+        },
+      },
+    //   1200: {
+    //     slidesPerView: 4,
+    //     grid: {
+    //       rows: 3,
+    //     },
+    //   },
+    // }
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    },
     pagination: {
 			el: " .swiper-pagination",
 			type: "bullets",
