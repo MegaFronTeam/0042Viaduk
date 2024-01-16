@@ -174,7 +174,7 @@ function eventHandler() {
 		},
   });
   const swiperCatalog = new Swiper(".sCatalog__swiper--js", {
-    slidesPerView: 2,
+    slidesPerView: 1,
     grid: {
       rows: 3,
     },
@@ -184,19 +184,19 @@ function eventHandler() {
 			prevEl: '.sCatalog__swiper .swiper-button-prev',
 		},
     breakpoints: {
-      768: {
+      576: {
         spaceBetween: 30,
+        slidesPerView: 2,
+        grid: {
+          rows: 3,
+        },
+      },
+      1200: {
         slidesPerView: 3,
         grid: {
           rows: 3,
         },
       },
-    //   1200: {
-    //     slidesPerView: 4,
-    //     grid: {
-    //       rows: 3,
-    //     },
-    //   },
     // }
     // pagination: {
     //   el: ".swiper-pagination",
