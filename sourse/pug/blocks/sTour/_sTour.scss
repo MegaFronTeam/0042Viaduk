@@ -6,6 +6,9 @@
   .mb-50 {
     margin-bottom: rem(50) !important;
   }
+  .mb-10 {
+    margin-bottom: rem(10);
+  }
   &__main-row {
     position: relative;
     z-index: 1;
@@ -18,8 +21,97 @@
   span {
     font-weight: 700;
   }
+  .img-gallery {
+    img {
+      transition: all .3s ease-in-out;
+      box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
+      cursor: pointer;
+    }
+    &__main-img {
+      margin-bottom: rem(10);
+      overflow: hidden;
+      border-radius: rem(30);
+      display: block;
+      &:hover {
+        img {
+          scale: 1.02;
+        }
+      }
+      @include media-breakpoint-up(md) {
+        margin-bottom: rem(20);
+      }
+    }
+    &__imgs-wrap {
+      display: flex;
+      justify-content: center;
+      gap: rem(10);
+      width: calc(100% - rem(20));
+      margin: 0 auto;
+      @include media-breakpoint-up(sm) {
+        width: calc(100% - rem(40));
+      }
+      @include media-breakpoint-up(md) {
+        gap: rem(20);
+        width: calc(100% - rem(100));
+      }
+      .img-wrap {
+        overflow: hidden;
+        width: calc(100% / 3 - rem(10));
+        border-radius: rem(25);
+        position: relative;
+        &:hover {
+          img {
+            scale: 1.05;
+          }
+        }
+        @include media-breakpoint-up(md) {
+          width: calc(100% / 5 - rem(20));
+          border-radius: rem(30);
+        }
+        &:last-child {
+          &::after {
+            content: '';
+            cursor: pointer;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: $black;
+            opacity: .4;
+          }
+        }
+        span {
+          position: absolute;
+          z-index: 3;
+          text-align: center;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: $white;
+        }
+      }
+      img {
+        aspect-ratio: 1 / 1;
+      }
+    }
+    .disp-none {
+      display: none;
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+  }
+
 
   .tabs {
+    padding: rem(20);
+    padding-top: rem(10);
+    position: relative;
+    @include media-breakpoint-up(xl){
+      padding: rem(50);
+      padding-top: rem(15);
+    }
     &__caption {
       margin-bottom: rem(22);
     }
@@ -30,11 +122,27 @@
       &:hover {
         color: $gray-800;
       }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: transparent;
+        @include mt;
+      }
+      &.active {
+        color: $black;
+        &::after {
+          background-color: $warning;
+        }
+      }
     }
-    .swiper-slide-active {
-      border-bottom: rem(2) solid $warning;
-      color: $gray-800;
-    }
+    // .swiper-slide .active {
+    //   border-bottom: rem(2) solid $warning;
+    //   color: $gray-800;
+    // }
     &__content {
       position: relative;
       & > :not(:last-child) {
@@ -260,9 +368,23 @@
     }
   }
   &__item--main {
-    padding: rem(20);
-    @include media-breakpoint-up(xl){
-      padding: rem(50);
+    padding: 0;
+    overflow: hidden;
+  }
+  .cost {
+    .dd-group {
+      margin-bottom: rem(50);
+    }
+    .dd-group__content {
+      padding-bottom: rem(20);
+    }
+  }
+  .inform {
+    .dd-group__item:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+    .dd-group__content {
+      padding-top: rem(45);
     }
   }
   .reviews {
@@ -270,8 +392,17 @@
       width: rem(220);
     }
   }
+  .calc {
+    .h3 {
+      margin-top: rem(50);
+      margin-bottom: 0;
+    }
+  }
   &__input-wrap {
-    // background-color: $body-bg;
+    background-color: $body-bg;
+    // position: absolute;
+    // top: rem(100);
+    // left: 0;
     &:not(:last-child) {
       margin-bottom: rem(15);
     }
@@ -279,7 +410,6 @@
       display: flex;
       margin-bottom: rem(10);
       flex-wrap: wrap;
-      
       .custom-input {
         padding: rem(7);
         padding-right: rem(20);
@@ -294,7 +424,6 @@
     .btn {
       width: rem(220);
     }
-    
     textarea {
       min-height: rem(210);
     }
@@ -382,12 +511,12 @@
       padding-right: rem(30);
     }
   }
-  .dd-group__item .dd-group__head {
+  .active .dd-group__head {
+    z-index: 2;
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10) !important;
   }
   .btn-link {
-    margin: rem(10) 0 !important;
-    padding-top: rem(10);
+    padding-top: rem(20);
   }
 }
 
