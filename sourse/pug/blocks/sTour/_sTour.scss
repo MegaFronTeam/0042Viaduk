@@ -387,6 +387,14 @@
       padding-top: rem(45);
     }
   }
+  .inform {
+    .dd-group__item:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+    .dd-group__content {
+      padding-top: rem(45);
+    }
+  }
   .reviews {
     .btn {
       width: rem(220);
