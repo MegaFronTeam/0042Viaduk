@@ -370,7 +370,7 @@
   }
   &__item--main {
     padding: 0;
-    overflow: hidden;
+    // overflow: hidden;
   }
   .cost {
     .dd-group {
@@ -401,20 +401,58 @@
       width: rem(220);
     }
   }
+  .swiper-horizontal {
+    overflow: hidden;
+  }
   .calc {
+    padding-bottom: 0;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      width: calc(100% + rem(40));
+      top: -15px;
+      height: rem(100);
+      z-index: -1;
+      left: rem(-20);
+      background-color: $white;
+      border-radius: rem(30);
+      @include media-breakpoint-up(xl) {
+        width: calc(100% + rem(100));
+        left: rem(-50);
+      }
+    }
     .h3 {
       margin-top: rem(50);
-      margin-bottom: 0;
+      margin-bottom: rem(50);
     }
   }
-  &__input-wrap {
-    background-color: $body-bg;
-    // position: absolute;
-    // top: rem(100);
-    // left: 0;
+  &__input-wrap:not(:last-child) {
     &:not(:last-child) {
       margin-bottom: rem(15);
     }
+  }
+  .wrapper {
+    background-color: transparent;
+    margin-top: rem(100);
+    margin-left: rem(-20);
+    margin-right: rem(-20);
+    position: relative;
+    @include media-breakpoint-up(xl) {
+      margin-left: rem(-50);
+      margin-right: rem(-50);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: calc(100% + rem(130));
+      background-color: $body-bg;
+      top: rem(-80);
+      z-index: -1;
+      left: 0;
+    }
+    
     .radio-wrap {
       display: flex;
       margin-bottom: rem(10);
