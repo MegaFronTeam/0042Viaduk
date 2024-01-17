@@ -159,7 +159,7 @@
 
 .page-head {
   background: $primary;
-  padding-top: rem(23);
+  padding-top: rem(30);
   padding-bottom: rem(23);
   position: relative;
   &::before {
@@ -182,6 +182,10 @@
       color: $white;
     }
   }
+  
+}
+.page-head--bag {
+  padding-top: rem(24);
   .icon-baggage {
     position: absolute;
     // bottom: -80%;

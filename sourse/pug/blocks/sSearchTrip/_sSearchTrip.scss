@@ -34,11 +34,14 @@
   }
   &__city {
     background: $white;
-    padding: rem(12) rem(20);
+    // padding: rem(12) rem(20);
+    padding: rem(12) rem(22);
+    height: 100%;
     border-radius: rem(30);
     display: block;
     @include media-breakpoint-up(sm) {
       padding: rem(20) rem(30);
+      height: auto;
     }
     &:hover {
       box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
@@ -57,19 +60,29 @@
     }
   }
   .swiper-grid-column>.swiper-wrapper {
-    height: rem(180);
+    height: rem(240);
     @include media-breakpoint-up(sm) {
       height: rem(243);
     }
   }
   &__arrow-wrap {
+    .icon {
+      stroke-width: rem(1);
+      fill: $gray-700;
+    }
     position: relative;
-    width: rem(110);
+    width: rem(50);
     z-index: 5;
     padding-left: rem(20);
     padding-right: rem(40);
     border-radius: rem(30);
     height: rem(60);
+    // .swiper-button-hand-next {
+    //   right: 13%;
+    // }
+    // .swiper-button-hand-prev {
+    //   left: 13%;
+    // }
     @include media-breakpoint-down(md) {
       margin: 0 auto;
       margin-top: rem(20);
@@ -93,10 +106,10 @@
       right: rem(-12);
       bottom: calc(33% - 60px);
       .swiper-button-hand-next {
-        right: 24%;
+        right: 22%;
       }
       .swiper-button-hand-prev {
-        left: 22%;
+        left: 20%;
       }
     }
   }

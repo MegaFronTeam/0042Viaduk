@@ -40,7 +40,7 @@ mixin page-head(t,...items)
 			h1= t
 
 mixin page-head2(t, , ...items)
-	+b.page-head
+	+b.page-head.page-head--bag
 		- let l = items.length
 		.container
 			+breadcrumb('Главная',...items)

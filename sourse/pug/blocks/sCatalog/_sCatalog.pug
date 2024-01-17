@@ -1,3 +1,4 @@
+include ../sTour/_sTour.pug
 
 mixin product-card(i, t, p ,btn)
 	+b.product-card(href='#')
@@ -18,7 +19,7 @@ mixin sCatalog()
 	+b.sCatalog.section&attributes(attributes)
 		.container
 			+e.row.row
-				+e.col-aside.col-auto.col-lg-3.small
+				+e.col-aside.col-auto.col-lg-3.small.order-1.order-lg-0
 					+ddGroup
 						+ddGroupItem('Регулярные туры', 'active')
 							ul
@@ -70,7 +71,7 @@ mixin sCatalog()
 								.swiper-slide
 									+product-card('4', 'Тур на 2 дня Палех-Шуя-Иваново', '', 'от 9900 руб.')
 								.swiper-slide
-									+product-card('5', 'Тур на 2 дня Ярославль-Кострома', 'с 23 сентября 2023г. по 21 апреля 2024г.', 'от 9000 руб.')
+									+product-card('5', 'Тур на 2 дня Ярославль-Кострома', 'с 23 сентября 2023г. ', 'от 9000 руб.')
 								.swiper-slide
 									+product-card('6', 'Школьные туры', '', 'Подробнее')
 								.swiper-slide
@@ -78,7 +79,7 @@ mixin sCatalog()
 							.swiper-pagination
 							+arrow()
 						+e.btn.btn.btn-warning показать еще
-				+b.rev-wrap.col-lg-9.offset-lg-3
+				+b.rev-wrap.col-lg-9.offset-lg-3.order-2
 					+e.rev-title-wrap
 						.h3 Отзывы
 						+e.btn.btn.btn-warning оставить отзыв
@@ -92,13 +93,3 @@ mixin sCatalog()
 								+review('Ольга, Марина', '20.07.23-23.07.23', 'По "Государевой Дороге из Петербурга в Москву"', 'С 20.07.23 по 23.07.23 были на экскурсии по "Государевой Дороге из Петербурга в Москву".Благодарим экскурсовода Анну Горшкову за интересный и увлекательный рассказ. увлекательный рассказ.<br>На экскурсии бывали -<br>Очень много повидали.<br>')
 
 	// end sCatalog
-mixin review(name, date, tour, descr)
-	+b.review-card
-		+e.author
-			+e.name
-				+icon('review')
-				span!= name
-			+e.date.small!= date
-		+e.tour.small!= tour
-		+e.descr
-			p!= descr
