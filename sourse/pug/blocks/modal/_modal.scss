@@ -9,6 +9,7 @@
 .modal-win {
 	// display: block;
 	background-color: $body-bg;
+  overflow: hidden;
 	max-width: 100%;
 	position: relative;
 	width: rem(1218);
@@ -60,13 +61,16 @@
     }
   }
   .icon-lines-form-bg {
+    display: none;
     position: absolute;
-    right: 0;
+    right: rem(-130);
     bottom: 0;
     font-size: rem(140);
-    z-index: 9999;
-    fill: $gray-300;
-    // color: $gray-300;
+    // z-index: 0;
+    stroke: $gray-300;
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
   }
 }
 
