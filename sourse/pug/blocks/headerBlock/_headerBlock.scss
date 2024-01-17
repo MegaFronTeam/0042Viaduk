@@ -55,6 +55,7 @@
     padding: rem(15);
     .icon {
       font-size: rem(32);
+      transform: translateY(rem(-2));
     }
     @include media-breakpoint-up(lg) {
       padding: rem(23) rem(15);
@@ -62,6 +63,7 @@
     &__title {
       text-transform: uppercase;
       font-weight: 500;
+      font-family: $font-family-monospace;
       line-height: 100%;
     }
     &:hover {
