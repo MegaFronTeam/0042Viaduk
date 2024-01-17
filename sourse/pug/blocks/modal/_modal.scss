@@ -8,23 +8,66 @@
 }
 .modal-win {
 	// display: block;
-	background-color: #fff;
+	background-color: $body-bg;
 	max-width: 100%;
 	position: relative;
-	width: rem(500);
-	// min-height: 100%; 
-	padding: 40px;
-
+	width: rem(1218);
+	min-height: 100%;
+	padding: rem(30);
+  border-radius: rem(30);
+  @include media-breakpoint-up(sm) {
+    padding: rem(60);
+    padding-top: rem(57);
+  }
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
 	}
-
+  .form-wrap__title {
+    .icon {
+      margin-left: rem(10);
+      transform: translateY(rem(-3));
+    }
+  }
+  .h4,
+  .row {
+    margin-bottom: rem(20);
+    @include media-breakpoint-up(sm) {
+      margin-bottom: rem(30);
+    }
+  }
+  .row {
+    --bs-gutter-y: #{rem(15)};
+  }
+  .form-wrap__input-wrap {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+  .textarea .form-wrap__input-wrap, textarea  {
+    min-height: rem(200);
+    height: 100%;
+  }
 	.mfp-close {
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
 	}
+  .btn {
+    width: 100%;
+    @include media-breakpoint-up(sm) {
+      width: rem(220);
+    }
+  }
+  .icon-lines-form-bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: rem(140);
+    z-index: 9999;
+    fill: $gray-300;
+    // color: $gray-300;
+  }
 }
 
 a {
@@ -100,7 +143,9 @@ a {
 		}
 	}
 }
-
+.fancybox__content>.f-button.is-close-btn {
+  opacity: 0;
+}
 
 // 
 @include media-breakpoint-up(xl) {}

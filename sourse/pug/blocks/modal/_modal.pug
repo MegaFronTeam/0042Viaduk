@@ -1,20 +1,24 @@
 
-mixin modal() 
-	//  start modals
-	div(id="modal-call"  style="display: none" )
-		+b.modal-win
-			+form-wrap
-				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+mixin modal()
+		//  start modals
+		
+		// #modal-review
+		div(id="modal-review"  style="display: none")
+			+b.modal-win
+				+form-wrap
+					+e.title.h4.fw-700 Оставить отзыв
+						+icon('review')
+					.row
+						.col-md-6
+							+input("Ваш имя*",'text','')
+							+input("Ваш телефон*", 'tel', '')
+							+input("Сайт",'text','')
+						.col-md-6.textarea
+							+input("Ваш отзыв*", 'textarea', '')
+					+e.BUTTON.btn.btn.btn-warning(type="submit") отправить
+				+icon('lines-form-bg')
 
-				+input("Ваше Имя")(required)
-				+input("Ваше телефон",'tel')(required)
-				+input("Ваше телефон",'tel')(required)
-				+e.BUTTON.btn.btn(type="submit"  ) submit
-				+policy()
-				+policy()
-	// #modal-call
+// #modal-review
 
-	
-	// end modals
+
+// end modals
