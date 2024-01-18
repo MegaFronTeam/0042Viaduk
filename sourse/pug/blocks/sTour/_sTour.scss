@@ -430,6 +430,9 @@
       margin-bottom: rem(50);
     }
   }
+  .data-picker-wrap {
+    margin-bottom: rem(15);
+  }
   &__input-wrap:not(:last-child) {
     &:not(:last-child) {
       margin-bottom: rem(15);

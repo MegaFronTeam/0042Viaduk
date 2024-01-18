@@ -238,3 +238,25 @@ if (document.readyState !== "loading") {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+
+const dataPickers = document.querySelectorAll('.data-picker-wrap');
+	for (const dataPickerEll of dataPickers) {
+		const dataPicker = dataPickerEll.querySelector('.data-picker--js');
+		// const dataPickerIcon = dataPickerEll.querySelector(`.data-picker ~ .icon`);
+
+		new AirDatepicker(dataPicker, {
+			autoClose: false,
+			// inline: true,
+			container: dataPickerEll,
+      position: 'top center',
+			onShow() {
+				dataPicker.classList.add('active');
+			},
+			onHide() {
+				dataPicker.classList.remove('active');
+			},
+			navTitles: {
+				days: 'yyyy <i>MMMM</i>',
+			},
+		});
+	}

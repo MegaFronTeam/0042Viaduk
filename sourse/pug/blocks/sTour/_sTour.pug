@@ -245,7 +245,8 @@ mixin sTour(data)
 											+input("Email",'email','')
 											+input("Название тура", 'text', '')
 										+e.col.col-md-6
-											+input("Предполагаемая дата выезда*", 'text', '')
+											.data-picker-wrap
+												+input("Предполагаемая дата выезда*",'text', "")(required readonly autocomplete="off"  class="date-input").data-picker--js
 											+input("Количество дней*", 'number', '')
 											+input("Количество человек в группе*", 'number', '')
 											+input("В том числе школьников (до 16 лет)*", 'number', '')
