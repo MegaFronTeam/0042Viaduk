@@ -36,7 +36,8 @@ mixin headerBlock()
 								.form-container
 									+form-wrap
 										+input("Выберите направление", 'text', 'Куда поедем?')
-										+input("Любая",'date', 'Дата заезда')(required readonly autocomplete="off" class="date-input" value="22.03.2024")
+										.data-picker-wrap
+											+input("Любая",'text', "Дата заезда")(required readonly autocomplete="off"  class="date-input").data-picker--js
 										+input('Любое', 'number', 'Кол-во дней')
 										+e.btn.btn.btn-warning.small найти туры
 											+icon('search')
@@ -50,7 +51,8 @@ mixin headerBlock()
 								.form-container
 									+form-wrap
 										+input("Выберите направление", 'text', 'Куда поедем?')
-										+input("Любая",'date', 'Дата заезда')(required readonly autocomplete="off" class="date-input" value="22.03.2024")
+										.data-picker-wrap
+											+input("Любая",'text', "Дата заезда")(required readonly autocomplete="off"  class="date-input").data-picker--js
 										+input('Любое', 'number', 'Кол-во дней')
 										+e.btn.btn.btn-warning.small найти туры
 											+icon('search')
