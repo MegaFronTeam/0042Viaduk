@@ -1,5 +1,5 @@
 mixin tripItem(text)
-	li: a(href="#").trip-item.small!= text
+	li: a(href="#")!= text
 
 mixin footer()
 	+b.FOOTER.footer.section
@@ -10,7 +10,7 @@ mixin footer()
 						+img('img/footer-1.png')
 						+img('img/footer-2.png')
 				.col
-					+e.trips
+					+e.trips.small
 						ul
 							+tripItem('Туры в Армению')
 							+tripItem('Туры в Белоруссию')
@@ -23,8 +23,8 @@ mixin footer()
 							+tripItem('Туры в Санкт-петербург')
 							+tripItem('Для турагентств')
 						ul
-							li: a(href="#").link-item Где купить?
-							li: a(href="#").link-item Как оплатить?
+							li: a(href="#") Где купить?
+							li: a(href="#") Как оплатить?
 				.col-5.col-md-4.col-lg-3
 					+b.info.small
 						+e.title Внимание

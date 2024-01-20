@@ -3,7 +3,7 @@ mixin sContact()
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
 			+e.row.row
-				.col-6.col-md-3
+				.col-auto.col-md-3
 					+e.logo(href="#")
 						+img('img/logo.png')
 				.col-12.col-lg-8.col-xl-6
@@ -13,11 +13,11 @@ mixin sContact()
 								+icon('phone')
 							+e.content
 								p Телефоны:
-									ul
-										li
-											+e.tel(href="tel:+74955450621") +7 (495) 545-06-21
-										li
-											+e.tel(href="tel:+74959616127") +7 (495) 961-61-27
+								ul
+									li
+										+e.tel(href="tel:+74955450621") +7 (495) 545-06-21
+									li
+										+e.tel(href="tel:+74959616127") +7 (495) 961-61-27
 						+b.contacts-item
 							+e.icon
 								+icon('clock')

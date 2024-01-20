@@ -34,18 +34,31 @@
 
 	}
 	&__slide{
-		height: auto;
-    position: relative;
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   border-radius: rem(100);
-    //   top: -50%;
-    //   left: -50%;
-    //   width: rem(500);
-    //   height: rem(500);
-    //   background: green;
-    // }
+    overflow: hidden;
+    &::after {
+      content: '';
+      position: absolute;
+      border-radius: 100%;
+      top: -58%;
+      left: -80%;
+      width: 150%;
+      height: 200%;
+      background: $body-bg;
+      transform: rotate(40deg);
+      @include media-breakpoint-up(sm) {
+        top: -80%;
+        left: -80%;
+        width: 150%;
+        height: 200%;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 44%;
+        top: -70%;
+        left: 89px;
+        height: rem(1100);
+        transform: rotate(46deg);
+      }
+    }
 	}
   .header-item {
     color: $gray-700;
@@ -85,26 +98,31 @@
     z-index: 5;
   }
   &__slide {
+    height: auto;
 		padding-top: rem(90);
     padding-bottom: rem(111);
     position: relative;
     z-index: 5;
-    &::before {
-      content:'';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      background: $body-bg;
-      opacity: .4;
-      @include media-breakpoint-up(lg) {
-        opacity: 0;
-      }
+    background: $body-bg;
+    // &::before {
+    //   content:'';
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   z-index: 0;
+    //   background: $body-bg;
+    //   opacity: .4;
+    //   @include media-breakpoint-up(lg) {
+    //     opacity: 0;
+    //   }
+    // }
+    img {
+      max-width: rem(1230);
+      right: 0;
+      left: auto;
     }
-    
-    
 		// @include media-breakpoint-up(lg) {
 		// 	padding: rem(110) rem(60) rem(162);
 		// }
@@ -120,9 +138,22 @@
     border-radius: rem(30);
     max-width: max-content;
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
+    .data-picker-wrap  {
+      // width: 100%;
+      .form-wrap__input-wrap:after {
+        content: '';
+        position: absolute;
+        right: rem(10);
+        bottom: 0;
+        height: rem(1);
+        width: calc(100% - rem(20));
+        background: $gray-200;
+      }
+    }
     @include media-breakpoint-up(lg) {
       border-radius: rem(100);
       .data-picker-wrap .form-wrap__input-wrap {
+        width: auto;
         max-width: rem(210);
         &:after {
           content: '';
@@ -136,13 +167,11 @@
         }
       }
     }
-    
     form {
       display: flex;
       align-items: start;
       padding: rem(10);
       padding-right: rem(5);
-      // row-gap: rem(20);
       overflow: hidden;
       flex-direction: column;
       @include media-breakpoint-up(sm) {
@@ -166,10 +195,17 @@
       padding-right: rem(15);
     }
     &__input-wrap {
-      // background: $white;
-      // border-radius: rem(100);
       padding: rem(10);
       position: relative;
+      &:not(:last-child):not(:nth-last-child(2)):after {
+        content: '';
+        position: absolute;
+        right: rem(10);
+        bottom: 0;
+        height: rem(1);
+        width: calc(100% - rem(20));
+        background: $gray-200;
+      }
       @include media-breakpoint-up(lg) {
         &:not(:last-child):not(:nth-last-child(2)):after {
           content: '';
@@ -179,16 +215,15 @@
           height: 400%;
           width: rem(1);
           background: $gray-200;
-          z-index: 102;
         }
       }
       label {
         display: flex;
         align-items:center;
+        justify-content: center;
         @include media-breakpoint-up(lg) {
           padding-left: rem(20);
         }
-        
       }
       &:nth-child(3) .form-wrap__input {
         max-width: rem(70);
@@ -200,6 +235,10 @@
       --bs-btn-padding-y: #{rem(10)};
       display: flex;
       align-items:center;
+      justify-content: center;
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
     }
     .icon {
       fill: $white;

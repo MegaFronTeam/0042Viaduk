@@ -3,10 +3,10 @@ mixin topLine()
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
 			+e.row.row
-				.col-6.col-md-4
+				.col.col-lg-4
 					+e.logo(href="#")
 						+img('img/logo.png')
-				.col
+				.col.d-none.d-lg-block
 					+e.contacts
 						+b.contacts-item
 							+e.icon
@@ -22,6 +22,8 @@ mixin topLine()
 								p График работы:
 								+e.schedule пн-пт 10:00-19:00, сб 11:00,
 								+e.schedule вс - выходной
-				.col-auto.col-lg-2
+				.col-auto.col-lg-2.d-none.d-lg-block
 					+e.btn.btn.btn-secondary.callback.small(href='#') Заказать звонок
+				.col-auto.d-lg-none
+					+menu-toggle()
 	// end topLine

@@ -92,9 +92,6 @@
     @include media-breakpoint-up(xl) {
       margin-left: rem(48);
     }
-    @include media-breakpoint-down(sm) {
-      display: none;
-    }
   }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

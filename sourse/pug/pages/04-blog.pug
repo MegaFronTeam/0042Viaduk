@@ -3,7 +3,7 @@ extends ../layout/main.pug
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
- 
+
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sForm/_sForm.pug
@@ -18,7 +18,7 @@ include ../blocks/sBlog/_sBlog.pug
 include ../blocks/sMap/_sMap.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= 'main-page'
 	- let  bg= null
 
 block title
@@ -26,8 +26,8 @@ block title
 	title= title
 block pagecontent
 	//- +mob-mnu()
-	
-	
+
+
 	+parts('header')
 	+page-head2('Блог о путешествиях', withIcon=true, 'Блог')
 		+icon('baggage')
@@ -36,5 +36,5 @@ block pagecontent
 		+sForm2()
 		+sForm()
 		+sContact()
-		
+
 	+parts('footer')

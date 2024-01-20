@@ -41,6 +41,9 @@
     }
     img {
       max-width: rem(222);
+      width: 100%;
+      margin: auto;
+      display: block;
     }
   }
   &__map-wrap {

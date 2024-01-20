@@ -3,7 +3,7 @@ extends ../layout/main.pug
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
- 
+
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sForm/_sForm.pug
@@ -16,7 +16,7 @@ include ../blocks/sAdvs/_sAdvs.pug
 include ../blocks/sMap/_sMap.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= 'main-page'
 	- let  bg= null
 
 block title
@@ -24,11 +24,11 @@ block title
 	title= title
 block pagecontent
 	//- +mob-mnu()
-	
-	
+
+
 	+parts('header')
 	main
-		+headerBlock 
+		+headerBlock
 		+sProductSlider
 		+sSearchTrip
 		+sAbout
@@ -36,7 +36,7 @@ block pagecontent
 		+sMap
 		+sForm()
 		+sContact()
-		
+
 	+parts('footer')
 block scripts
 	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c") 

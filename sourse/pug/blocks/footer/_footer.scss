@@ -18,30 +18,20 @@
     color: $gray-100;
   }
   li:not(:last-child) {
-    padding-bottom: rem(5);
+    padding-bottom: rem(8);
   }
   ul {
     margin-bottom: 0;
   }
-  .trip-item:hover {
+  li a:hover {
     color: var(--accent-dark);
   }
-  .link-item {
+  ul:last-child a {
     color: $warning;
     &:hover {
       color: var(--accent-dark);
       }
   }
-  
-	// .section-title{
-
-	// }
-	// &__col{
-
-	// }
-	// &__item{
-
-	// }
   &__img-wrap {
     img {
       max-width: 46%;

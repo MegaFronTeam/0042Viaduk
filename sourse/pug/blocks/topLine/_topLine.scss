@@ -16,9 +16,12 @@
     align-items: center;
 	}
   &__logo {
-    width: rem(320);
+    width: rem(210);
     display: block;
     max-width: 100%;
+    @include media-breakpoint-up(lg) {
+      width: rem(320);
+    }
     img {
       width: 100%;
     }
@@ -71,7 +74,7 @@
     --bs-btn-padding-y: #{rem(10)};
     --bs-btn-padding-x: #{rem(20)};
     // --bs-btn-font-size:  #{rem(14)};
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
       display: none;
     }
   }
