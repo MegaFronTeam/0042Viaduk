@@ -59,19 +59,6 @@ mixin headerBlock()
 					.swiper-pagination
 					+e.arr-wrapper
 						+arrow()
-				
-				//- .container.form-container
-					+form-wrap
-						+e.row.row
-							.col-auto
-								+input("Выберите направление", 'text', 'Куда поедем?')
-							.col-auto
-								+input("Любая",'date', 'Дата заезда')(required readonly autocomplete="off"	class="date-input" value="22.03.2024")
-							.col-3
-								+input('Любое', 'number', 'Кол-во дней')
-							.col-auto
-								+e.btn.btn.btn-warning.small найти туры
-									+icon('search')
 			.container
 				+e.row.row
 					+headerItem('holiday', 'туры на праздники')
