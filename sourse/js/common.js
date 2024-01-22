@@ -94,7 +94,7 @@ function eventHandler() {
 	})
   new Swiper('.rev-wrap__swiper--js', {
 		freeMode: true,
-    loop: true,
+    loop: false,
 		slidesPerView: 1,
 		spaceBetween: 20,
 		breakpoints: {

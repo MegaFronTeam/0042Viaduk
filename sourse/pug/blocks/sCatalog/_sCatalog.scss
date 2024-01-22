@@ -54,6 +54,13 @@
       background-repeat: no-repeat;
       background-size: 100% 100%;
     }
+    
+  }
+  .accordion-toggle {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block !important;
+    }
   }
     
   &__wrap-row {
