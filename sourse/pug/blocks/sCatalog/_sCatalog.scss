@@ -39,22 +39,27 @@
     margin-bottom: rem(15);
     font-weight: 700;
     background: $white;
-    // border: 1px solid $gray-300;
+    cursor: pointer;
     &:before {
       content: "";
       position: absolute;
-      top: 50%;
+      @include mt;
+      top: rem(20);
       bottom: auto;
-      transform: translateY(-50%);
+      // transform: translateY(-50%);
       right: rem(20);
       width: rem(24);
       height: rem(24);
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cpath stroke='%23236DAC' stroke-linecap='round' d='m8 10 4 4 4-4'/%3E%3C/svg%3E");
       background-position: 50%;
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      // background-size: 100% 100%;
     }
-    
+  }
+  .accordion-js.active {
+    &:before {
+      transform: rotate(180deg);
+    }
   }
   .accordion-toggle {
     display: none;
