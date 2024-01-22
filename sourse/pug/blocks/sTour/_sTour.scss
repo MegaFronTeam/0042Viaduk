@@ -96,12 +96,6 @@
         color: $white;
       }
     }
-    .disp-none {
-      display: none;
-      @include media-breakpoint-up(md) {
-        display: block;
-      }
-    }
   }
 
 
@@ -505,11 +499,16 @@
 .dd-group-js--tour {
   .dd-group {
     &__head {
-      padding: rem(15);
-      padding-right: rem(30);
+      padding: rem(15) rem(10);
+      margin: 0 rem(-10);
       background: $body-bg;
       border-radius: rem(30);
       align-items: center;
+      @include media-breakpoint-up(sm) {
+        padding: rem(15);
+        padding-right: rem(30);
+        margin: 0;
+      }
     }
     &__head-wrap {
       display: flex;
@@ -517,15 +516,18 @@
       align-items: center;
       // flex-wrap: wrap;
       span {
+        display: flex;
         color: $white;
         background: $primary;
+        // flex-wrap: wrap;
         padding: rem(10) rem(15);
         border-radius: rem(20);
-        .icon-calendar {
-          margin-right: rem(15);
-        }
+        gap: rem(10);
+        justify-content: center;
         @include media-breakpoint-up(sm) {
           padding: rem(16) rem(20);
+          gap: rem(15);
+          // flex-wrap: nowrap;
         }
         @include media-breakpoint-up(md) {
           padding: rem(16) rem(30);
@@ -570,7 +572,10 @@
       }
     }
     &__content--sm {
-      padding-right: rem(30);
+      @include media-breakpoint-up(md) {
+        padding-right: rem(30);
+      }
+      
     }
   }
   .active .dd-group__head {

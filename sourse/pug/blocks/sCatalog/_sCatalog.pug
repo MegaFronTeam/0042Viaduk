@@ -20,33 +20,35 @@ mixin sCatalog()
 	+b.sCatalog.section&attributes(attributes)
 		.container
 			+e.row.row
-				+e.col-aside.col-auto.col-lg-3.small.order-1.order-lg-0
-					+ddGroup
-						+ddGroupItem('Регулярные туры', 'active')
-							ul
-								li
-									span По России
-									.smallest (по алфавиту)
-								li: a(href='#') Астрахань
-								li: a(href='#') Байкал
-								li: a(href='#') Великий Устюг
-								li: a(href='#') Вологда
-								li: a(href='#') Золотое Кольцо
-								li: a(href='#') Кавказ
-								li: a(href='#') Казань
-								li: a(href='#') Калининградская область
-								li: a(href='#') Камчатка
-								li: a(href='#') Карелия
-								li: a(href='#') Крым
-								li
-									span По СНГ
-								li: a(href='#') Белоруссия
-						+ddGroupItem('Другие туры')
-							ul
-								li: a(href='#') Астрахань
-								li: a(href='#') Байкал
-								li: a(href='#') Великий Устюг
-								li: a(href='#') Вологда
+				+e.col-aside.col-md-6.col-lg-3.small.order-lg-0
+					+e.sort.d-lg-none.accordion-js.active Сортировать
+					.accordion-toggle
+						+ddGroup
+							+ddGroupItem('Регулярные туры', 'active')
+								ul
+									li
+										span По России
+										.smallest (по алфавиту)
+									li: a(href='#') Астрахань
+									li: a(href='#') Байкал
+									li: a(href='#') Великий Устюг
+									li: a(href='#') Вологда
+									li: a(href='#') Золотое Кольцо
+									li: a(href='#') Кавказ
+									li: a(href='#') Казань
+									li: a(href='#') Калининградская область
+									li: a(href='#') Камчатка
+									li: a(href='#') Карелия
+									li: a(href='#') Крым
+									li
+										span По СНГ
+									li: a(href='#') Белоруссия
+							+ddGroupItem('Другие туры')
+								ul
+									li: a(href='#') Астрахань
+									li: a(href='#') Байкал
+									li: a(href='#') Великий Устюг
+									li: a(href='#') Вологда
 				+e.col-main.col-lg-9
 					+e.wrap-row.row
 						.col-sm-6.col-lg-4

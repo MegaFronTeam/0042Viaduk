@@ -309,3 +309,9 @@ if(btnDelArr.length > 0) {
 	})
 	
 }
+
+
+$('.accordion-js').click(function(){
+  $(this).parent().find('.accordion-toggle').slideToggle();
+  $(this).toggleClass('active');
+})

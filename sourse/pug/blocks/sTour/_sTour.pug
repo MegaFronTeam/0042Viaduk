@@ -12,8 +12,8 @@ mixin sTour(data)
 							+e.imgs-wrap
 								+e.img-wrap(data-fancybox="gallery", href='img/gallery-2.png'): +img('img/gallery-2.png', 'bg')
 								+e.img-wrap(data-fancybox="gallery", href='img/gallery-3.png'): +img('img/gallery-3.png', 'bg')
-								+e.img-wrap(data-fancybox="gallery", href='img/gallery-4.png').disp-none: +img('img/gallery-4.png', 'bg')
-								+e.img-wrap(data-fancybox="gallery", href='img/gallery-5.png').disp-none: +img('img/gallery-5.png', 'bg')
+								+e.img-wrap(data-fancybox="gallery", href='img/gallery-4.png').d-none.d-md-block: +img('img/gallery-4.png', 'bg')
+								+e.img-wrap(data-fancybox="gallery", href='img/gallery-5.png').d-none.d-md-block: +img('img/gallery-5.png', 'bg')
 								+e.img-wrap(data-fancybox="gallery", href='img/gallery-1.png')
 									+img('img/gallery-1.png', 'bg')
 									span Все фото
@@ -246,7 +246,7 @@ mixin sTour(data)
 											+input("Название тура", 'text', '')
 										+e.col.col-md-6
 											.data-picker-wrap
-												+input("Предполагаемая дата выезда*",'text', "")(required readonly autocomplete="off"  class="date-input").data-picker--js
+												+input("Предполагаемая дата выезда*",'text', "")(required readonly autocomplete="off"	class="date-input").data-picker--js
 											+input("Количество дней*", 'number', '')
 											+input("Количество человек в группе*", 'number', '')
 											+input("В том числе школьников (до 16 лет)*", 'number', '')
@@ -268,22 +268,16 @@ mixin sTour(data)
 								| 10.09.2023 16:37:48 мск.
 							+e.stars
 								+e.item-stars
-									+e.item-star.active
-										+icon('rate-star')
-									+e.item-star.active
-										+icon('rate-star')
-									+e.item-star.active
-										+icon('rate-star')
-									+e.item-star.active
-										+icon('rate-star')
-									+e.item-star
-										+icon('rate-star')
-								| рейтинг: 5
+									- var starsCount = 4
+									- for (let i = 1; i <= 5; i++)
+										+e.item-star(class= i <= starsCount ? 'active' : '')
+											+icon('rate-star')
+									| Рейтинг: #{starsCount}
 							+b.schedule
 								+e.title Даты туров:
 								p 31 декабря 2023г. - 02 января 2024г.
-							+e.btn.btn.btn-warning.fw-300 от
-								span 16 500
+							+e.btn.btn.btn-warning.fw-300 от 
+								span 16 500 
 								| руб./чел.
 								p Смотреть все цены
 							+e.btn.btn.btn-warning Забронировать онлайн
