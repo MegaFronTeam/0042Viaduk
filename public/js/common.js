@@ -260,3 +260,52 @@ const dataPickers = document.querySelectorAll('.data-picker-wrap');
 			},
 		});
 	}
+  const dataPickerBottom = document.querySelectorAll('.data-picker-wrap');
+	for (const dataPickerEll of dataPickers) {
+		const dataPicker = dataPickerEll.querySelector('.data-picker--js_bottom');
+		// const dataPickerIcon = dataPickerEll.querySelector(`.data-picker ~ .icon`);
+
+		new AirDatepicker(dataPicker, {
+			autoClose: false,
+			// inline: true,
+			container: dataPickerEll,
+      position: 'bottom center',
+			onShow() {
+				dataPicker.classList.add('active');
+			},
+			onHide() {
+				dataPicker.classList.remove('active');
+			},
+			navTitles: {
+				days: 'yyyy <i>MMMM</i>',
+			},
+		});
+	}
+
+  const btnDelArr = document.querySelectorAll(".photo-file-delete-js")
+
+let loadFile = function(event) {
+	let eventElem = event.srcElement.parentElement;
+
+	eventElem.querySelector('.img-preview').src = URL.createObjectURL(event.target.files[0]);
+
+	eventElem.querySelector('.img-preview').classList.add("active");
+	eventElem.classList.add("border-0")
+	if(eventElem.querySelector(".photo-file-delete-js")) {
+		eventElem.querySelector(".photo-file-delete-js").classList.remove("d-none")
+	}
+};
+
+if(btnDelArr.length > 0) {
+	btnDelArr.forEach((btnDel) => {
+		btnDel.addEventListener("click", function(){
+			this.classList.add("d-none");
+			
+			btnDel.parentElement.querySelector('.img-preview').classList.remove("active")
+			btnDel.parentElement.querySelector('.img-preview').src = "";
+			btnDel.parentElement.querySelector('[onchange="loadFile(event)"]').value = '';  
+			btnDel.parentElement.classList.remove("border-0");
+		})
+	})
+	
+}

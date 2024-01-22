@@ -616,7 +616,7 @@
 			<script>addBlock(`footer`)</script>
 			<div id="footerWrap"></div>
 		</div>
-		<!--  start modals-->
+		<!--	start modals-->
 		<!-- #modal-review-->
 		<div id="modal-review" style="display: none">
 			<div class="modal-win">
@@ -643,6 +643,56 @@
 								<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваш отзыв*"></textarea>
 								</div>
 								<!-- +e.input-wrap-->
+							</div>
+						</div>
+						<button class="form-wrap__btn btn btn-warning" type="submit">отправить
+						</button>
+					</form>
+				</div>
+				<svg class="icon icon-lines-form-bg ">
+					<use xlink:href="img/svg/sprite.svg#lines-form-bg"></use>
+				</svg>
+			</div>
+		</div>
+		<!-- #modal-review-->
+		<!-- #modal-review-2-->
+		<div id="modal-review-2" style="display: none">
+			<div class="modal-win modal-win--photo">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title h4 fw-700">Оставить отзыв
+							<svg class="icon icon-review ">
+								<use xlink:href="img/svg/sprite.svg#review"></use>
+							</svg>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Ваш имя*"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="data-picker-wrap">
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control date-input data-picker data-picker--js_bottom" inputmode="text" name="text" type="text" placeholder="Дата поездки*" required="required" readonly="readonly" autocomplete="off"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Тур"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-md-6 textarea">
+								<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваш отзыв*"></textarea>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-auto">
+								<div class="form-wrap__title_second">Загрузить фотографии
+								</div>
+								<label class="add-photo">
+									<input type="file" name="" onchange="loadFile(event)"/><span class="add-photo__img-wrap bg-wrap"><img class="img-bg img-preview" src="" alt=""/>
+									<svg class="icon icon-photo ">
+										<use xlink:href="img/svg/sprite.svg#photo"></use>
+									</svg></span>
+								</label>
 							</div>
 						</div>
 						<button class="form-wrap__btn btn btn-warning" type="submit">отправить

@@ -137,6 +137,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(336 / #{$h} *1em );
 }
+.icon-photo {
+	$h: 60;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(60 / #{$h} *1em );
+}
 .icon-plus {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);

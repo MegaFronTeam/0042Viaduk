@@ -1,9 +1,9 @@
 
 mixin modal()
-		//  start modals
+		//	start modals
 
 		// #modal-review
-		div(id="modal-review"  style="display: none")
+		div(id="modal-review"	style="display: none")
 			+b.modal-win
 				+form-wrap
 					+e.title.h4.fw-700 Оставить отзыв
@@ -18,7 +18,32 @@ mixin modal()
 					+e.BUTTON.btn.btn.btn-warning(type="submit") отправить
 				+icon('lines-form-bg')
 
-// #modal-review
+		// #modal-review
 
+		// #modal-review-2
+		div(id="modal-review-2"	style="display: none")
+			+b.modal-win--photo
+				+form-wrap
+					+e.title.h4.fw-700 Оставить отзыв
+						+icon('review')
+					.row
+						.col-md-6
+							+input("Ваш имя*",'text','')
+							.data-picker-wrap
+								+input("Дата поездки*",'text', "")(required readonly autocomplete="off"  class="date-input").data-picker--js_bottom
+							+input("Тур",'text','')
+						.col-md-6.textarea
+							+input("Ваш отзыв*", 'textarea', '')
+						.col-auto
+							+e.title_second Загрузить фотографии
+							+b.LABEL.add-photo
+								input(type="file", name="" onchange="loadFile(event)")
+								+e.img-wrap.bg-wrap
+									img(src="", alt="").img-bg.img-preview
+									+icon('photo')
+					+e.BUTTON.btn.btn.btn-warning(type="submit") отправить
+				+icon('lines-form-bg')
+
+// #modal-review
 
 // end modals
