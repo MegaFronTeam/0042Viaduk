@@ -10,8 +10,9 @@ mixin product-card(i, t, p ,btn)
 				+e.title!= t
 				if p
 					+e.text.small!= p
-			+e.btn.btn.btn-warning.small.fw-300!= btn
-				+icon('chevron-right')
+			+e.btn-wrap
+				+e.btn.btn.btn-warning.small.fw-300!= btn
+					+icon('chevron-right')
 	// /.product-card
 
 mixin sCatalog()
@@ -47,38 +48,24 @@ mixin sCatalog()
 								li: a(href='#') Великий Устюг
 								li: a(href='#') Вологда
 				+e.col-main.col-lg-9
-					+e.wrap
-						+e.swiper--js
-							.swiper-wrapper.swiper-wrapper__tour
-								.swiper-slide
-									+product-card('1', 'Туры по Золотому кольцу на Новый год', '', 'Подробнее')
-								.swiper-slide
-									+product-card('2', 'Туры по Золотому кольцу на Рождество', '', 'Подробнее')
-								.swiper-slide
-									+product-card('3', 'Автобусные туры по России', 'из Москвы', 'Подробнее')
-								.swiper-slide
-									+product-card('4', 'Тур на 2 дня Палех-Шуя-Иваново', '', 'от 9900 руб.')
-								.swiper-slide
-									+product-card('5', 'Тур на 2 дня Ярославль-Кострома', 'с 23 сентября 2023г. по 21 апреля 2024г.', 'от 9000 руб.')
-								.swiper-slide
-									+product-card('6', 'Школьные туры', '', 'Подробнее')
-								.swiper-slide
-									+product-card('5', 'Тур на 3 дня Ярославль-Кострома', 'с 23 сентября 2023г. по 21 апреля 2024г.', 'от 9000 руб.')
-								.swiper-slide
-									+product-card('2', 'Туры по Золотому кольцу на Рождество', '', 'Подробнее')
-								.swiper-slide
-									+product-card('3', 'Автобусные туры по России', 'из Москвы', 'Подробнее')
-								.swiper-slide
-									+product-card('4', 'Тур на 2 дня Палех-Шуя-Иваново', '', 'от 9900 руб.')
-								.swiper-slide
-									+product-card('5', 'Тур на 2 дня Ярославль-Кострома', 'с 23 сентября 2023г. ', 'от 9000 руб.')
-								.swiper-slide
-									+product-card('6', 'Школьные туры', '', 'Подробнее')
-								.swiper-slide
-									+product-card('5', 'Тур на 3 дня Ярославль-Кострома', 'с 23 сентября 2023г. по 21 апреля 2024г.', 'от 9000 руб.')
-							.swiper-pagination
-							+arrow()
-						+e.btn.btn.btn-warning показать еще
+					+e.wrap-row.row
+						.col-sm-6.col-lg-4
+							+product-card('1', 'Туры по Золотому кольцу на Новый год', '', 'Подробнее')
+						.col-sm-6.col-lg-4
+							+product-card('2', 'Туры по Золотому кольцу на Рождество', '', 'Подробнее')
+						.col-sm-6.col-lg-4
+							+product-card('3', 'Автобусные туры по России', 'из Москвы', 'Подробнее')
+						.col-sm-6.col-lg-4
+							+product-card('4', 'Тур на 2 дня Палех-Шуя-Иваново', '', 'от 9900 руб.')
+						.col-sm-6.col-lg-4
+							+product-card('5', 'Тур на 2 дня Ярославль-Кострома', 'с 23 сентября 2023г. по 21 апреля 2024г.', 'от 9000 руб.')
+						.col-sm-6.col-lg-4
+							+product-card('6', 'Школьные туры', '', 'Подробнее')
+						.col-sm-6.col-lg-4
+							+product-card('5', 'Тур на 3 дня Ярославль-Кострома', 'с 23 сентября 2023г. по 21 апреля 2024г.', 'от 9000 руб.')
+						.col-12
+							+e.btn.btn.btn-warning показать еще
+							+pugin()
 				+b.rev-wrap.col-lg-9.offset-lg-3.order-2
 					+e.rev-title-wrap
 						.h3 Отзывы

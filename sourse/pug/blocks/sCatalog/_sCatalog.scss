@@ -3,7 +3,6 @@
 	--sPT: #{rem(0)};
   --sPB: #{rem(135)};
       // --sTPB: #{rem()};
-    
   &__row {
     position: relative;
     z-index: 1;
@@ -23,68 +22,75 @@
   }
   &__btn {
     width: 100%;
-    margin-bottom: rem(90);
+    margin-bottom: rem(50);
+    margin-top: rem(20);
     --bs-btn-padding-y: #{rem(10)};
   }
   &__col-main {
     position: relative;
   }
-  
-  // .swiper-button-hand
-  &__swiper--js {
-    overflow: hidden;
+  &__wrap-row {
+    --bs-gutter-y: #{rem(30)};
   }
-  // .swiper-slide {
-  //   height: 100%;
-  // }
-  .swiper-button-hand {
-    margin: 0;
-    margin-top: auto;
-    --swiperArrowPosition: #{3%};
-    --swiperArrowSize: #{rem(45)};
+  .page-numbers {
+    display: flex;
+    gap: rem(10);
+    justify-content: center;
+    margin-bottom: 0;
+    li:not(:first-child):not(:last-child) {
+      a, span {
+        padding: rem(6) 0;
+        width: rem(30);
+        height: rem(30);
+        background: $white;
+        border-radius: 50%;
+        color: $gray-700;
+        font-weight: 600;
+        font-size: $small;
+        text-align: center;
+        @include media-breakpoint-up(md) {
+          padding: rem(8) 0;
+          width: rem(33);
+          height: rem(33);
+        }
+      }
+      span {
+        display: block;
+      }
+      &:hover {
+        a {
+          background: $primary;
+          color: $white;
+        }
+      }
+      .current {
+        background: $primary;
+        color: $white;
+      }
+    }
     @include media-breakpoint-up(sm) {
-      --swiperArrowSize: #{rem(50)};
+      li:first-child {
+        margin-right: rem(5);
+      }
+      li:last-child {
+        margin-left: rem(5);
+      }
     }
-    @include media-breakpoint-up(md) {
-      --swiperArrowPosition: #{25%};
-    }
-    @include media-breakpoint-up(xl) {
-      --swiperArrowPosition: #{32%};
-    }
-  }
-  .swiper-button-hand-next {
-    // right: 10%;
-  }
-  .swiper-pagination-bullet {
-    width: rem(33);
-    height: rem(33);
-    background: $white;
-    color: $gray-700;
-    font-weight: 600;
-    font-size: $small;
-    line-height: 2.5;
-    &:hover {
-      background: $primary;
-      color: $white;
-    }
-    &-active {
-      background: $primary;
-      color: $white;
-    }
-  }
-  .swiper-wrapper__tour {
-    // height: max-content;
-    max-height: rem(1200);
-    margin-bottom: rem(50);
-    @include media-breakpoint-up(sm) {
-      height: rem(1120);
-    }
-    @include media-breakpoint-up(md) {
-      height: rem(1200);
+
+    .icon {
+      transition: all .3s ease-in-out;
+      fill: $gray-700;
+      font-size: rem(11);
+      @include media-breakpoint-up(sm) {
+        font-size: rem(15);
+      }
+      &:hover {
+        fill: $gray-400;
+      }
     }
   }
   .rev-wrap {
-    margin-top: rem(55);
+    margin-top: rem(60);
     &__rev-title-wrap {
       display: flex;
       justify-content: space-between;
@@ -103,6 +109,7 @@
       }
     }
   }
+  
   .review-card {
     padding: rem(20);
     padding-bottom: rem(10);
@@ -139,13 +146,9 @@
 	background: $white;
 	border-radius: rem(30);
 	overflow: hidden;
-	// position: relative;
-  max-width: rem(448);
   height: 100%;
   display: block;
-  @include media-breakpoint-down(sm) {
-
-  }
+  position: relative;
   img {
     transition: all .3s ease-in-out;
     width: 100%;
@@ -164,54 +167,38 @@
     border-radius: rem(30);
     overflow: hidden;
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
-    @include media-breakpoint-down(sm) {
-
-    }
 	}
-  // &__descr-wrap {
-  //   margin-bottom: rem(20);
-  // }
-  &__caption{
-    height: 38%;
-		padding: rem(20);
-    display: flex;
+  &__caption {
+		display: flex;
+    padding: rem(20);
     flex-direction: column;
-    justify-content: space-between;
-    @include media-breakpoint-up(sm) {
-      height: 52%;
-    }
-    @include media-breakpoint-up(md) {
-      height: 38%;
-    }
-    @include media-breakpoint-up(xl) {
-      height: 48%;
-    }
 	}
+  &__title-w {
+    margin-bottom: rem(20);
+  }
   &__title {
     font-weight: 700;
     color: $gray-800;
     margin-bottom: rem(5);
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
   &__text {
     color: $gray-400;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    // display: -webkit-box;
+    // -webkit-line-clamp: 2;
+    // -webkit-box-orient: vertical;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
     // margin: auto;
-    margin-bottom: rem(20);
+  }
+  &__btn-wrap {
+    height: rem(40);
   }
   &__btn {
-    // margin: auto;
+    position: absolute;
     text-transform: none;
-    width: 100%;
-    // vertical-align: bottom;
+    width: calc(100% - 40px);
+    bottom: rem(20);
+    left: rem(20);
     --bs-btn-padding-y: #{rem(10)};
     --bs-btn-padding-x: #{rem(0)};
     .icon {
