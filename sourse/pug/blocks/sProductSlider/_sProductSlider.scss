@@ -59,6 +59,9 @@
     &__container {
       padding-left: rem(30);
       padding-right: rem(30);
+      span {
+        font-size: rem(20);
+      }
     }
     &__title {
       font-size: rem(24);
